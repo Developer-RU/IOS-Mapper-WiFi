@@ -49,6 +49,13 @@ struct DashboardView: View {
                                 LabeledContent(viewModel.localNetworkPermissionLabel, value: viewModel.localNetworkStatus)
                             }
                             .font(.subheadline)
+
+                            if !viewModel.canStartScanning {
+                                Button("dashboard.permissions.openSettings") {
+                                    viewModel.openAppSettings()
+                                }
+                                .buttonStyle(.borderedProminent)
+                            }
                         }
                     }
 

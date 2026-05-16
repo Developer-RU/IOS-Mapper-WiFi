@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "Дайте разрешения на геолокацию и локальную сеть, затем не выключайте телефон во время активного сканирования.";
 "dashboard.permissions.location" = "Геолокация";
 "dashboard.permissions.localNetwork" = "Локальная сеть";
+"dashboard.permissions.openSettings" = "Открыть настройки";
 "dashboard.hero.badge" = "Оффлайн режим обследования";
 "dashboard.hero.title" = "Оффлайн-картирование Wi-Fi городского уровня";
 "dashboard.hero.subtitle" = "Отслеживайте перемещение, сохраняйте локальные наблюдения и держите базу обследования на устройстве.";

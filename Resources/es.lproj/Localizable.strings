@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "Concede permisos de ubicación y red local, y luego mantén el teléfono encendido durante el escaneo activo.";
 "dashboard.permissions.location" = "Ubicación";
 "dashboard.permissions.localNetwork" = "Red local";
+"dashboard.permissions.openSettings" = "Abrir ajustes";
 "dashboard.hero.badge" = "Modo de encuesta offline";
 "dashboard.hero.title" = "Mapeo Wi-Fi offline de nivel ciudad";
 "dashboard.hero.subtitle" = "Rastrea movimientos, captura observaciones locales y mantén toda la base de datos en el dispositivo.";

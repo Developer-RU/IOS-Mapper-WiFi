@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "Erlauben Sie Ortung und lokales Netzwerk und lassen Sie das Telefon dann während des aktiven Scans eingeschaltet.";
 "dashboard.permissions.location" = "Ortung";
 "dashboard.permissions.localNetwork" = "Lokales Netzwerk";
+"dashboard.permissions.openSettings" = "Einstellungen öffnen";
 "dashboard.hero.badge" = "Offline-Erhebungsmodus";
 "dashboard.hero.title" = "Stadtweite Offline-Wi-Fi-Kartierung";
 "dashboard.hero.subtitle" = "Bewegungen verfolgen, lokale Beobachtungen aufzeichnen und die gesamte Erhebungsdatenbank auf dem Gerät halten.";

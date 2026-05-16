@@ -2,10 +2,13 @@
 import Combine
 import CoreLocation
 import Foundation
+import UIKit
 import WiFiMapperCore
 @MainActor
 final class DashboardViewModel: ObservableObject {
     @Published private(set) var sessionState = ScanSessionState()
+    @Published private(set) var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+    @Published private(set) var localNetworkAuthorizationStatus: PermissionService.LocalNetworkStatus = .unknown
     @Published private(set) var locationStatus = String(localized: "location.status.notAuthorized")
     @Published private(set) var localNetworkStatus = String(localized: "permission.localNetwork.unknown")
     @Published private(set) var accuracy = "Unknown"
@@ -45,6 +48,7 @@ final class DashboardViewModel: ObservableObject {
             .combineLatest(appModel.locationService.$accuracyDescription)
             .receive(on: RunLoop.main)
             .sink { [weak self] status, accuracy in
+                self?.locationAuthorizationStatus = status
                 self?.locationStatus = Self.describe(status)
                 self?.accuracy = accuracy
             }
@@ -53,6 +57,7 @@ final class DashboardViewModel: ObservableObject {
         appModel.permissionService.$localNetworkStatus
             .receive(on: RunLoop.main)
             .sink { [weak self] status in
+                self?.localNetworkAuthorizationStatus = status
                 self?.localNetworkStatus = Self.describe(status)
             }
             .store(in: &cancellables)
@@ -85,12 +90,27 @@ final class DashboardViewModel: ObservableObject {
     }
 
     func toggleScanning() {
-        sessionState.isScanning ? appModel.scannerService.stopScanning() : appModel.scannerService.startScanning()
+        if sessionState.isScanning {
+            appModel.scannerService.stopScanning()
+            return
+        }
+
+        guard canStartScanning else {
+            sessionState.lastErrorMessage = String(localized: "dashboard.permissions.body")
+            return
+        }
+
+        appModel.scannerService.startScanning()
     }
 
     func requestPermissions() {
         appModel.permissionService.requestLocation(using: appModel.locationService)
         appModel.permissionService.requestLocalNetwork()
+    }
+
+    func openAppSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+        UIApplication.shared.open(url)
     }
 
     func elapsedText(since startDate: Date, now: Date) -> String {
@@ -122,6 +142,12 @@ final class DashboardViewModel: ObservableObject {
 
     var localNetworkPermissionLabel: String {
         String(localized: "dashboard.permissions.localNetwork")
+    }
+
+    var canStartScanning: Bool {
+        let locationGranted = locationAuthorizationStatus == .authorizedAlways || locationAuthorizationStatus == .authorizedWhenInUse
+        let localNetworkGranted = localNetworkAuthorizationStatus == .granted
+        return locationGranted && localNetworkGranted
     }
 
     private static func describe(_ status: CLAuthorizationStatus) -> String {

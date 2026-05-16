@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "Concedi i permessi di localizzazione e rete locale, poi lascia il telefono acceso durante la scansione attiva.";
 "dashboard.permissions.location" = "Localizzazione";
 "dashboard.permissions.localNetwork" = "Rete locale";
+"dashboard.permissions.openSettings" = "Apri Impostazioni";
 "dashboard.hero.badge" = "Modalità rilevamento offline";
 "dashboard.hero.title" = "Mappatura Wi-Fi offline su scala urbana";
 "dashboard.hero.subtitle" = "Traccia i movimenti, cattura osservazioni locali e mantieni l'intero database sul dispositivo.";

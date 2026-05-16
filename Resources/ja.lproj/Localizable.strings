@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "位置情報とローカルネットワークの権限を許可してから、アクティブスキャン中は画面をオフにしないでください。";
 "dashboard.permissions.location" = "位置情報";
 "dashboard.permissions.localNetwork" = "ローカルネットワーク";
+"dashboard.permissions.openSettings" = "設定を開く";
 "dashboard.hero.badge" = "オフライン測量モード";
 "dashboard.hero.title" = "都市規模のオフラインWi-Fiマッピング";
 "dashboard.hero.subtitle" = "移動を追跡し、ローカル観測を記録し、全測量データをデバイスに保持。";

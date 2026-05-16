@@ -73,6 +73,7 @@
 "dashboard.permissions.body" = "Grant Location and Local Network permissions, then keep the phone awake during active scanning.";
 "dashboard.permissions.location" = "Location";
 "dashboard.permissions.localNetwork" = "Local network";
+"dashboard.permissions.openSettings" = "Open Settings";
 "dashboard.hero.badge" = "Offline survey mode";
 "dashboard.hero.title" = "City-grade offline Wi-Fi mapping";
 "dashboard.hero.subtitle" = "Track movement, capture local observations, and keep the entire survey database on device.";
