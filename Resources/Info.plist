@@ -28,6 +28,10 @@
 	<string>WiFi Mapper uses your location to place Wi-Fi observations on the map.</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>WiFi Mapper checks local network availability to enrich offline diagnostics.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_wifimap._tcp</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

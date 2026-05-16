@@ -6,6 +6,8 @@ import Network
 import WiFiMapperCore
 @MainActor
 final class PermissionService: ObservableObject {
+    private static let localNetworkBonjourType = "_wifimap._tcp"
+
     enum LocalNetworkStatus: String {
         case unknown
         case granted
@@ -23,7 +25,7 @@ final class PermissionService: ObservableObject {
     func requestLocalNetwork() {
         let parameters = NWParameters()
         parameters.includePeerToPeer = true
-        let browser = NWBrowser(for: .bonjour(type: "_http._tcp", domain: nil), using: parameters)
+        let browser = NWBrowser(for: .bonjour(type: Self.localNetworkBonjourType, domain: nil), using: parameters)
         self.browser = browser
         browser.stateUpdateHandler = { [weak self] state in
             Task { @MainActor in
