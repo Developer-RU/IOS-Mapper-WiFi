@@ -58,7 +58,6 @@ public struct ScannerSettings: Codable, Equatable {
     public var highAccuracyGPS = true
     public var repeatedChecks = 2
     public var retryCount = 1
-    public var backgroundScanningEnabled = true
     public var autoSave = true
     public var signalThreshold = -88
     public var ignoreWeakNetworks = true

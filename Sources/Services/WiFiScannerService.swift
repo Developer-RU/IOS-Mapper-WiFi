@@ -3,6 +3,7 @@ import Combine
 import CoreLocation
 import Foundation
 import NetworkExtension
+import UIKit
 import WiFiMapperCore
 @MainActor
 final class WiFiScannerService: ObservableObject {
@@ -37,6 +38,7 @@ final class WiFiScannerService: ObservableObject {
         sessionState.isScanning = true
         sessionState.startedAt = Date()
         sessionState.lastErrorMessage = nil
+        UIApplication.shared.isIdleTimerDisabled = true
         locationService.start(highAccuracy: settings.highAccuracyGPS)
 
         scanTask = Task {
@@ -50,6 +52,7 @@ final class WiFiScannerService: ObservableObject {
                 await MainActor.run {
                     sessionState.isScanning = false
                     sessionState.lastErrorMessage = error.localizedDescription
+                    UIApplication.shared.isIdleTimerDisabled = false
                 }
             }
         }
@@ -59,6 +62,7 @@ final class WiFiScannerService: ObservableObject {
         scanTask?.cancel()
         scanTask = nil
         locationService.stop()
+        UIApplication.shared.isIdleTimerDisabled = false
 
         if let sessionID = sessionState.sessionID {
             Task {
@@ -110,7 +114,6 @@ final class WiFiScannerService: ObservableObject {
     }
 
     func performBackgroundRefresh() async {
-        guard settings.backgroundScanningEnabled else { return }
         _ = try? await captureCurrentNetwork(sessionID: sessionState.sessionID)
         await refreshHistory()
     }

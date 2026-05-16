@@ -3,7 +3,6 @@ import SwiftUI
 import WiFiMapperCore
 @main
 struct WiFiMapperApp: App {
-    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var appModel = AppModel()
     @State private var showSplash = true
 
@@ -16,7 +15,6 @@ struct WiFiMapperApp: App {
         let root = ZStack {
             ContentView(appModel: appModel)
                 .task {
-                    appModel.configureBackgroundTasks()
                     try? await Task.sleep(for: .seconds(1.8))
                     withAnimation(.smooth(duration: 0.6)) {
                         showSplash = false
@@ -41,11 +39,6 @@ struct WiFiMapperApp: App {
     var body: some Scene {
         WindowGroup {
             configuredRootView
-        }
-        .onChange(of: scenePhase) { _, newPhase in
-            if newPhase == .background {
-                appModel.scheduleRefresh()
-            }
         }
     }
 }

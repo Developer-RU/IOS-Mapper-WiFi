@@ -95,10 +95,6 @@ struct SettingsView: View {
                                 get: { viewModel.settings.highAccuracyGPS },
                                 set: { value in viewModel.update { $0.highAccuracyGPS = value } }
                             ))
-                            Toggle("settings.performance.backgroundScanning", isOn: Binding(
-                                get: { viewModel.settings.backgroundScanningEnabled },
-                                set: { value in viewModel.update { $0.backgroundScanningEnabled = value } }
-                            ))
                             Toggle("settings.performance.autoSave", isOn: Binding(
                                 get: { viewModel.settings.autoSave },
                                 set: { value in viewModel.update { $0.autoSave = value } }

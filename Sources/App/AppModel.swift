@@ -1,5 +1,4 @@
 
-import BackgroundTasks
 import Combine
 import Foundation
 import SwiftUI
@@ -115,7 +114,6 @@ final class AppModel: ObservableObject {
     let permissionService: PermissionService
     let scannerService: WiFiScannerService
     let exportService: ExportService
-    let backgroundTaskService: BackgroundTaskService
     @Published var appearance: AppAppearance {
         didSet {
             UserDefaults.standard.set(appearance.rawValue, forKey: Self.appearanceDefaultsKey)
@@ -143,28 +141,18 @@ final class AppModel: ObservableObject {
         let permissionService = PermissionService()
         let scannerService = WiFiScannerService(repository: repository, locationService: locationService)
         let exportService = ExportService(repository: repository, persistence: persistence)
-        let backgroundTaskService = BackgroundTaskService(scannerService: scannerService)
 
         self.repository = repository
         self.locationService = locationService
         self.permissionService = permissionService
         self.scannerService = scannerService
         self.exportService = exportService
-        self.backgroundTaskService = backgroundTaskService
         let savedAppearance = UserDefaults.standard.string(forKey: Self.appearanceDefaultsKey)
         let savedLanguage = UserDefaults.standard.string(forKey: Self.languageDefaultsKey)
         let savedTextSize = UserDefaults.standard.string(forKey: Self.textSizeDefaultsKey)
         self.appearance = AppAppearance(rawValue: savedAppearance ?? "") ?? .system
         self.language = AppLanguage(rawValue: savedLanguage ?? "") ?? .system
         self.textSize = AppTextSize(rawValue: savedTextSize ?? "") ?? .system
-    }
-
-    func configureBackgroundTasks() {
-        backgroundTaskService.register()
-    }
-
-    func scheduleRefresh() {
-        backgroundTaskService.scheduleRefresh()
     }
 
     func seedDemoData() async {
