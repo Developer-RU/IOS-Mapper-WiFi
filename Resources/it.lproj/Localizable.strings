@@ -1,6 +1,6 @@
-"tab.dashboard" = "Dashboard";
+"tab.dashboard" = "Panoramica";
 "tab.map" = "Mappa";
-"tab.database" = "Database";
+"tab.database" = "Archivio";
 "tab.analytics" = "Analisi";
 "tab.history" = "Cronologia";
 "tab.settings" = "Impostazioni";
@@ -16,7 +16,7 @@
 "settings.language.title" = "Lingua";
 "settings.language.picker" = "Lingua";
 "settings.language.system" = "Sistema";
-"settings.language.english" = "English";
+"settings.language.english" = "Inglese";
 "settings.language.russian" = "Русский";
 "settings.language.spanish" = "Español";
 "settings.language.german" = "Deutsch";

@@ -16,7 +16,7 @@
 "settings.language.title" = "Язык";
 "settings.language.picker" = "Язык";
 "settings.language.system" = "Системный";
-"settings.language.english" = "English";
+"settings.language.english" = "Английский";
 "settings.language.russian" = "Русский";
 "settings.language.spanish" = "Español";
 "settings.language.german" = "Deutsch";
@@ -164,7 +164,7 @@
 "networkDetails.frequency" = "Частота";
 "networkDetails.channel" = "Канал";
 "networkDetails.encryption" = "Шифрование";
-"networkDetails.captivePortal" = "Captive portal";
+"networkDetails.captivePortal" = "Авторизованный портал";
 "networkDetails.authHint" = "Подсказка авторизации";
 "networkDetails.coordinates" = "Координаты";
 "networkDetails.scanCount" = "Число сканов";
