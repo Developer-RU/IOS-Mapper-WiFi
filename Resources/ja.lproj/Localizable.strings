@@ -68,6 +68,7 @@
 "dashboard.area.list.disappeared" = "消滅";
 "dashboard.area.list.empty" = "エントリなし";
 "dashboard.platformNote.title" = "プラットフォーム注意事項";
+"dashboard.platformNote.body" = "スキャン中は画面をオフにしないでください。";
 "dashboard.hero.badge" = "オフライン測量モード";
 "dashboard.hero.title" = "都市規模のオフラインWi-Fiマッピング";
 "dashboard.hero.subtitle" = "移動を追跡し、ローカル観測を記録し、全測量データをデバイスに保持。";

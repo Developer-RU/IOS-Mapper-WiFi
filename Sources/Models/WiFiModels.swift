@@ -151,7 +151,6 @@ public struct ScanSessionState: Equatable {
     public var totalObservations = 0
     public var uniqueNetworks = 0
     public var lastErrorMessage: String?
-    public var capabilityMessage = "Public iOS APIs can only read the currently associated Wi-Fi network. Nearby passive Wi-Fi scanning is not available without private entitlements."
 }
 
 public struct NetworkFilter: Equatable {

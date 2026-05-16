@@ -68,6 +68,7 @@
 "dashboard.area.list.disappeared" = "Scomparso";
 "dashboard.area.list.empty" = "Nessuna voce";
 "dashboard.platformNote.title" = "Nota piattaforma";
+"dashboard.platformNote.body" = "Lascia il telefono acceso durante la scansione.";
 "dashboard.hero.badge" = "Modalità rilevamento offline";
 "dashboard.hero.title" = "Mappatura Wi-Fi offline su scala urbana";
 "dashboard.hero.subtitle" = "Traccia i movimenti, cattura osservazioni locali e mantieni l'intero database sul dispositivo.";

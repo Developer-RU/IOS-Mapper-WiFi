@@ -63,7 +63,7 @@ struct DashboardView: View {
                         VStack(alignment: .leading, spacing: 12) {
                             Text("dashboard.platformNote.title")
                                 .font(.headline)
-                            Text(viewModel.sessionState.capabilityMessage)
+                            Text("dashboard.platformNote.body")
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
                         }
