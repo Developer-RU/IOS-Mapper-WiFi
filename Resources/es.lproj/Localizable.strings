@@ -67,8 +67,6 @@
 "dashboard.area.list.new" = "Recién visto";
 "dashboard.area.list.disappeared" = "Desaparecido";
 "dashboard.area.list.empty" = "Sin entradas";
-"dashboard.platformNote.title" = "Nota de plataforma";
-"dashboard.platformNote.body" = "Mantén el teléfono encendido mientras se escanea.";
 "dashboard.hero.badge" = "Modo de encuesta offline";
 "dashboard.hero.title" = "Mapeo Wi-Fi offline de nivel ciudad";
 "dashboard.hero.subtitle" = "Rastrea movimientos, captura observaciones locales y mantén toda la base de datos en el dispositivo.";

@@ -59,15 +59,6 @@ struct DashboardView: View {
                         }
                     }
 
-                    GlassCard {
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("dashboard.platformNote.title")
-                                .font(.headline)
-                            Text("dashboard.platformNote.body")
-                                .font(.footnote)
-                                .foregroundStyle(.secondary)
-                        }
-                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 18)

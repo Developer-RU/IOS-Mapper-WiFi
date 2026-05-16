@@ -67,8 +67,6 @@
 "dashboard.area.list.new" = "Newly seen";
 "dashboard.area.list.disappeared" = "Disappeared";
 "dashboard.area.list.empty" = "No entries";
-"dashboard.platformNote.title" = "Platform note";
-"dashboard.platformNote.body" = "Keep the phone awake while scanning.";
 "dashboard.hero.badge" = "Offline survey mode";
 "dashboard.hero.title" = "City-grade offline Wi-Fi mapping";
 "dashboard.hero.subtitle" = "Track movement, capture local observations, and keep the entire survey database on device.";
