@@ -137,13 +137,18 @@ final class WiFiScannerService: ObservableObject {
             return liveNetworks.first
         }
 
+#if targetEnvironment(simulator)
+        sessionState.lastErrorMessage = String(localized: "scan.simulatorUnsupported")
+        return nil
+#endif
+
         guard let location = locationService.currentLocation?.coordinate else {
-            sessionState.lastErrorMessage = "Waiting for location fix before scanning."
+            sessionState.lastErrorMessage = String(localized: "scan.waitingForLocation")
             return nil
         }
 
         guard let hotspot = await fetchCurrentNetwork(timeout: 2.5) else {
-            sessionState.lastErrorMessage = String(localized: "dashboard.permissions.body")
+            sessionState.lastErrorMessage = String(localized: "scan.connectToWifi")
             return nil
         }
 

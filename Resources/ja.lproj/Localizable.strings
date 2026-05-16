@@ -74,6 +74,9 @@
 "dashboard.permissions.location" = "位置情報";
 "dashboard.permissions.localNetwork" = "ローカルネットワーク";
 "dashboard.permissions.openSettings" = "設定を開く";
+"scan.simulatorUnsupported" = "物理的なiPhoneを使用してください。シミュレータではWi‑Fiネットワークを読み取れません。";
+"scan.waitingForLocation" = "スキャン前に位置情報を取得しています。";
+"scan.connectToWifi" = "Wi‑Fiネットワークに接続してください。このアプリは現在接続中のネットワークのみ記録します。";
 "dashboard.hero.badge" = "オフライン測量モード";
 "dashboard.hero.title" = "都市規模のオフラインWi-Fiマッピング";
 "dashboard.hero.subtitle" = "移動を追跡し、ローカル観測を記録し、全測量データをデバイスに保持。";

@@ -74,6 +74,9 @@
 "dashboard.permissions.location" = "Ortung";
 "dashboard.permissions.localNetwork" = "Lokales Netzwerk";
 "dashboard.permissions.openSettings" = "Einstellungen öffnen";
+"scan.simulatorUnsupported" = "Verwenden Sie ein physisches iPhone. Der Simulator kann keine Wi-Fi-Netzwerke lesen.";
+"scan.waitingForLocation" = "Warten auf einen Standortfix vor dem Scannen.";
+"scan.connectToWifi" = "Verbinden Sie sich mit einem Wi-Fi-Netzwerk. Diese App protokolliert nur das aktuell verbundene Netzwerk.";
 "dashboard.hero.badge" = "Offline-Erhebungsmodus";
 "dashboard.hero.title" = "Stadtweite Offline-Wi-Fi-Kartierung";
 "dashboard.hero.subtitle" = "Bewegungen verfolgen, lokale Beobachtungen aufzeichnen und die gesamte Erhebungsdatenbank auf dem Gerät halten.";
