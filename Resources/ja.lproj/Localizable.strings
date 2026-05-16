@@ -68,9 +68,9 @@
 "dashboard.area.list.disappeared" = "消滅";
 "dashboard.area.list.empty" = "エントリなし";
 "dashboard.platformNote.title" = "プラットフォーム注意事項";
-"dashboard.platformNote.body" = "アクティブスキャン中は画面をオフにしないでください。";
+"dashboard.platformNote.body" = "標準のiPhoneでは完全なWi‑Fiスキャナーは使えません。このアプリは現在接続中のネットワークのみ記録します。";
 "dashboard.permissions.title" = "権限";
-"dashboard.permissions.body" = "位置情報とローカルネットワークの権限を許可してから、アクティブスキャン中は画面をオフにしないでください。";
+"dashboard.permissions.body" = "位置情報とローカルネットワークの権限を許可してください。このアプリは近くのすべてのWi‑Fiネットワークではなく、現在接続中のネットワークのみ記録します。";
 "dashboard.permissions.location" = "位置情報";
 "dashboard.permissions.localNetwork" = "ローカルネットワーク";
 "dashboard.permissions.openSettings" = "設定を開く";
@@ -191,7 +191,7 @@
 "settings.readiness.locationMode.value" = "常時 + バックグラウンド位置情報";
 "settings.readiness.localNetwork" = "ローカルネットワーク";
 "settings.readiness.localNetwork.value" = "診断には権限プロンプトが必要";
-"settings.readiness.note" = "公開iOS APIはすべての近くのWi-Fiネットワークをパッシブスキャンできません。アプリは現在接続中のネットワークとGPS/履歴をローカルに記録します。";
+"settings.readiness.note" = "標準のiPhoneでは完全なWi‑Fiスキャナーは使えません。アプリは現在接続中のネットワークとGPS/履歴のみをローカルに記録します。";
 "settings.demoData.title" = "デモデータ";
 "settings.demoData.generate" = "デモデータセットを生成";
 

@@ -68,9 +68,9 @@
 "dashboard.area.list.disappeared" = "Scomparso";
 "dashboard.area.list.empty" = "Nessuna voce";
 "dashboard.platformNote.title" = "Nota piattaforma";
-"dashboard.platformNote.body" = "Lascia il telefono acceso durante la scansione attiva.";
+"dashboard.platformNote.body" = "Uno scanner Wi‑Fi completo non è possibile su un iPhone standard. Questa app registra solo la rete attualmente associata.";
 "dashboard.permissions.title" = "Permessi";
-"dashboard.permissions.body" = "Concedi i permessi di localizzazione e rete locale, poi lascia il telefono acceso durante la scansione attiva.";
+"dashboard.permissions.body" = "Concedi i permessi di localizzazione e rete locale. Questa app registra solo la rete attualmente associata, non tutte le reti Wi‑Fi vicine.";
 "dashboard.permissions.location" = "Localizzazione";
 "dashboard.permissions.localNetwork" = "Rete locale";
 "dashboard.permissions.openSettings" = "Apri Impostazioni";
@@ -191,7 +191,7 @@
 "settings.readiness.locationMode.value" = "Always + posizione in background";
 "settings.readiness.localNetwork" = "Rete locale";
 "settings.readiness.localNetwork.value" = "Autorizzazione richiesta per diagnostica";
-"settings.readiness.note" = "Le API pubbliche iOS non consentono la scansione passiva di tutte le reti Wi-Fi nelle vicinanze. L'app registra la rete attualmente associata più GPS/cronologia in locale.";
+"settings.readiness.note" = "Uno scanner Wi‑Fi completo non è possibile su un iPhone standard. L’app registra solo la rete attualmente associata e GPS/storico in locale.";
 "settings.demoData.title" = "Dati demo";
 "settings.demoData.generate" = "Genera dataset demo";
 

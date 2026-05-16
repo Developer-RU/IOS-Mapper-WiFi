@@ -68,9 +68,9 @@
 "dashboard.area.list.disappeared" = "Исчезнувшие";
 "dashboard.area.list.empty" = "Нет записей";
 "dashboard.platformNote.title" = "Примечание платформы";
-"dashboard.platformNote.body" = "Не выключайте телефон во время активного сканирования.";
+"dashboard.platformNote.body" = "Полноценный Wi‑Fi-сканер на обычном iPhone сделать нельзя. Приложение сохраняет только текущую подключённую сеть.";
 "dashboard.permissions.title" = "Разрешения";
-"dashboard.permissions.body" = "Дайте разрешения на геолокацию и локальную сеть, затем не выключайте телефон во время активного сканирования.";
+"dashboard.permissions.body" = "Дайте разрешения на геолокацию и локальную сеть. Приложение сохраняет только текущую подключённую сеть, а не все ближайшие Wi‑Fi сети.";
 "dashboard.permissions.location" = "Геолокация";
 "dashboard.permissions.localNetwork" = "Локальная сеть";
 "dashboard.permissions.openSettings" = "Открыть настройки";
@@ -198,7 +198,7 @@
 "settings.readiness.locationMode.value" = "Always + фоновая геолокация";
 "settings.readiness.localNetwork" = "Локальная сеть";
 "settings.readiness.localNetwork.value" = "Нужно разрешение для диагностики";
-"settings.readiness.note" = "Публичные API iOS не позволяют пассивно сканировать все ближайшие Wi-Fi сети. Приложение сохраняет текущую подключённую сеть и GPS/историю локально.";
+"settings.readiness.note" = "Полноценный Wi‑Fi-сканер на обычном iPhone сделать нельзя. Приложение сохраняет только текущую подключённую сеть и GPS/историю локально.";
 "settings.demoData.title" = "Демо-данные";
 "settings.demoData.generate" = "Сгенерировать демо-набор";
 

@@ -68,9 +68,9 @@
 "dashboard.area.list.disappeared" = "Disappeared";
 "dashboard.area.list.empty" = "No entries";
 "dashboard.platformNote.title" = "Platform note";
-"dashboard.platformNote.body" = "Keep the phone awake during active scanning.";
+"dashboard.platformNote.body" = "A full Wi-Fi scanner is not possible on stock iPhone. This app only logs the currently associated network.";
 "dashboard.permissions.title" = "Permissions";
-"dashboard.permissions.body" = "Grant Location and Local Network permissions, then keep the phone awake during active scanning.";
+"dashboard.permissions.body" = "Grant Location and Local Network permissions. This app only logs the currently associated network, not all nearby Wi-Fi networks.";
 "dashboard.permissions.location" = "Location";
 "dashboard.permissions.localNetwork" = "Local network";
 "dashboard.permissions.openSettings" = "Open Settings";
@@ -198,7 +198,7 @@
 "settings.readiness.locationMode.value" = "Always + background location";
 "settings.readiness.localNetwork" = "Local network";
 "settings.readiness.localNetwork.value" = "Prompt required for diagnostics";
-"settings.readiness.note" = "Public iOS APIs do not allow passive scanning of all nearby Wi-Fi networks. The app records the currently associated network plus GPS/history locally.";
+"settings.readiness.note" = "A full Wi-Fi scanner is not possible on stock iPhone. The app records only the currently associated network plus GPS/history locally.";
 "settings.demoData.title" = "Demo data";
 "settings.demoData.generate" = "Generate demo dataset";
 
