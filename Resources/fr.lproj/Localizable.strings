@@ -69,6 +69,10 @@
 "dashboard.area.list.empty" = "Aucune entrée";
 "dashboard.platformNote.title" = "Note de plateforme";
 "dashboard.platformNote.body" = "Laissez le téléphone allumé pendant l’analyse active.";
+"dashboard.permissions.title" = "Autorisations";
+"dashboard.permissions.body" = "Autorisez la localisation et le réseau local, puis laissez le téléphone allumé pendant l’analyse active.";
+"dashboard.permissions.location" = "Localisation";
+"dashboard.permissions.localNetwork" = "Réseau local";
 "dashboard.hero.badge" = "Mode relevé hors ligne";
 "dashboard.hero.title" = "Cartographie Wi-Fi hors ligne à l'échelle de la ville";
 "dashboard.hero.subtitle" = "Suivez les déplacements, capturez les observations locales et gardez toute la base de données sur l'appareil.";
@@ -245,3 +249,7 @@
 "location.status.restricted" = "Restreint";
 "location.status.pending" = "En attente";
 "location.status.unknown" = "Inconnu";
+
+"permission.localNetwork.unknown" = "Inconnu";
+"permission.localNetwork.granted" = "Autorisé";
+"permission.localNetwork.denied" = "Refusé";

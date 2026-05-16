@@ -69,6 +69,10 @@
 "dashboard.area.list.empty" = "エントリなし";
 "dashboard.platformNote.title" = "プラットフォーム注意事項";
 "dashboard.platformNote.body" = "アクティブスキャン中は画面をオフにしないでください。";
+"dashboard.permissions.title" = "権限";
+"dashboard.permissions.body" = "位置情報とローカルネットワークの権限を許可してから、アクティブスキャン中は画面をオフにしないでください。";
+"dashboard.permissions.location" = "位置情報";
+"dashboard.permissions.localNetwork" = "ローカルネットワーク";
 "dashboard.hero.badge" = "オフライン測量モード";
 "dashboard.hero.title" = "都市規模のオフラインWi-Fiマッピング";
 "dashboard.hero.subtitle" = "移動を追跡し、ローカル観測を記録し、全測量データをデバイスに保持。";
@@ -245,3 +249,7 @@
 "location.status.restricted" = "制限";
 "location.status.pending" = "保留中";
 "location.status.unknown" = "不明";
+
+"permission.localNetwork.unknown" = "不明";
+"permission.localNetwork.granted" = "許可済み";
+"permission.localNetwork.denied" = "拒否";

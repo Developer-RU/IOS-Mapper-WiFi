@@ -7,6 +7,7 @@ import WiFiMapperCore
 final class DashboardViewModel: ObservableObject {
     @Published private(set) var sessionState = ScanSessionState()
     @Published private(set) var locationStatus = String(localized: "location.status.notAuthorized")
+    @Published private(set) var localNetworkStatus = String(localized: "permission.localNetwork.unknown")
     @Published private(set) var accuracy = "Unknown"
     @Published private(set) var currentSSID = "No data"
     @Published private(set) var lastScanText = "Waiting"
@@ -46,6 +47,13 @@ final class DashboardViewModel: ObservableObject {
             .sink { [weak self] status, accuracy in
                 self?.locationStatus = Self.describe(status)
                 self?.accuracy = accuracy
+            }
+            .store(in: &cancellables)
+
+        appModel.permissionService.$localNetworkStatus
+            .receive(on: RunLoop.main)
+            .sink { [weak self] status in
+                self?.localNetworkStatus = Self.describe(status)
             }
             .store(in: &cancellables)
 
@@ -100,6 +108,22 @@ final class DashboardViewModel: ObservableObject {
         }
     }
 
+    var permissionSummaryTitle: String {
+        String(localized: "dashboard.permissions.title")
+    }
+
+    var permissionSummaryBody: String {
+        String(localized: "dashboard.permissions.body")
+    }
+
+    var locationPermissionLabel: String {
+        String(localized: "dashboard.permissions.location")
+    }
+
+    var localNetworkPermissionLabel: String {
+        String(localized: "dashboard.permissions.localNetwork")
+    }
+
     private static func describe(_ status: CLAuthorizationStatus) -> String {
         switch status {
         case .authorizedAlways: return String(localized: "location.status.always")
@@ -108,6 +132,14 @@ final class DashboardViewModel: ObservableObject {
         case .restricted: return String(localized: "location.status.restricted")
         case .notDetermined: return String(localized: "location.status.pending")
         @unknown default: return String(localized: "location.status.unknown")
+        }
+    }
+
+    private static func describe(_ status: PermissionService.LocalNetworkStatus) -> String {
+        switch status {
+        case .unknown: return String(localized: "permission.localNetwork.unknown")
+        case .granted: return String(localized: "permission.localNetwork.granted")
+        case .denied: return String(localized: "permission.localNetwork.denied")
         }
     }
 

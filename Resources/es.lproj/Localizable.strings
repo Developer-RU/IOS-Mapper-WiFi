@@ -69,6 +69,10 @@
 "dashboard.area.list.empty" = "Sin entradas";
 "dashboard.platformNote.title" = "Nota de plataforma";
 "dashboard.platformNote.body" = "Mantén el teléfono encendido durante el escaneo activo.";
+"dashboard.permissions.title" = "Permisos";
+"dashboard.permissions.body" = "Concede permisos de ubicación y red local, y luego mantén el teléfono encendido durante el escaneo activo.";
+"dashboard.permissions.location" = "Ubicación";
+"dashboard.permissions.localNetwork" = "Red local";
 "dashboard.hero.badge" = "Modo de encuesta offline";
 "dashboard.hero.title" = "Mapeo Wi-Fi offline de nivel ciudad";
 "dashboard.hero.subtitle" = "Rastrea movimientos, captura observaciones locales y mantén toda la base de datos en el dispositivo.";
@@ -245,3 +249,7 @@
 "location.status.restricted" = "Restringido";
 "location.status.pending" = "Pendiente";
 "location.status.unknown" = "Desconocido";
+
+"permission.localNetwork.unknown" = "Desconocido";
+"permission.localNetwork.granted" = "Concedido";
+"permission.localNetwork.denied" = "Denegado";

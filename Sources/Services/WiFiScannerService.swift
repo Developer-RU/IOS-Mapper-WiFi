@@ -143,7 +143,7 @@ final class WiFiScannerService: ObservableObject {
         }
 
         guard let hotspot = await fetchCurrentNetwork(timeout: 2.5) else {
-            sessionState.lastErrorMessage = String(localized: "dashboard.platformNote.body")
+            sessionState.lastErrorMessage = String(localized: "dashboard.permissions.body")
             return nil
         }
 

@@ -38,6 +38,22 @@ struct DashboardView: View {
 
                     GlassCard {
                         VStack(alignment: .leading, spacing: 12) {
+                            Text(viewModel.permissionSummaryTitle)
+                                .font(.headline)
+                            Text(viewModel.permissionSummaryBody)
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                LabeledContent(viewModel.locationPermissionLabel, value: viewModel.locationStatus)
+                                LabeledContent(viewModel.localNetworkPermissionLabel, value: viewModel.localNetworkStatus)
+                            }
+                            .font(.subheadline)
+                        }
+                    }
+
+                    GlassCard {
+                        VStack(alignment: .leading, spacing: 12) {
                             Text("dashboard.area.title")
                                 .font(.headline)
                             Text("dashboard.area.radius \(Int(viewModel.areaComparison.radiusMeters)) \(viewModel.areaComparison.centerDescription)")

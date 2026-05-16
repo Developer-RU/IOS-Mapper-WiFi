@@ -69,6 +69,10 @@
 "dashboard.area.list.empty" = "Keine Einträge";
 "dashboard.platformNote.title" = "Plattformhinweis";
 "dashboard.platformNote.body" = "Lassen Sie das Telefon während des aktiven Scans eingeschaltet.";
+"dashboard.permissions.title" = "Berechtigungen";
+"dashboard.permissions.body" = "Erlauben Sie Ortung und lokales Netzwerk und lassen Sie das Telefon dann während des aktiven Scans eingeschaltet.";
+"dashboard.permissions.location" = "Ortung";
+"dashboard.permissions.localNetwork" = "Lokales Netzwerk";
 "dashboard.hero.badge" = "Offline-Erhebungsmodus";
 "dashboard.hero.title" = "Stadtweite Offline-Wi-Fi-Kartierung";
 "dashboard.hero.subtitle" = "Bewegungen verfolgen, lokale Beobachtungen aufzeichnen und die gesamte Erhebungsdatenbank auf dem Gerät halten.";
@@ -245,3 +249,7 @@
 "location.status.restricted" = "Eingeschränkt";
 "location.status.pending" = "Ausstehend";
 "location.status.unknown" = "Unbekannt";
+
+"permission.localNetwork.unknown" = "Unbekannt";
+"permission.localNetwork.granted" = "Erlaubt";
+"permission.localNetwork.denied" = "Verweigert";
