@@ -67,6 +67,8 @@
 "dashboard.area.list.new" = "Récemment vu";
 "dashboard.area.list.disappeared" = "Disparu";
 "dashboard.area.list.empty" = "Aucune entrée";
+"dashboard.platformNote.title" = "Note de plateforme";
+"dashboard.platformNote.body" = "Laissez le téléphone allumé pendant l’analyse active.";
 "dashboard.hero.badge" = "Mode relevé hors ligne";
 "dashboard.hero.title" = "Cartographie Wi-Fi hors ligne à l'échelle de la ville";
 "dashboard.hero.subtitle" = "Suivez les déplacements, capturez les observations locales et gardez toute la base de données sur l'appareil.";

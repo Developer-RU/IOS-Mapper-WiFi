@@ -143,7 +143,7 @@ final class WiFiScannerService: ObservableObject {
         }
 
         guard let hotspot = await fetchCurrentNetwork(timeout: 2.5) else {
-            sessionState.lastErrorMessage = "Current Wi-Fi network is unavailable. Nearby passive scanning is blocked on public iOS APIs."
+            sessionState.lastErrorMessage = String(localized: "dashboard.platformNote.body")
             return nil
         }
 

@@ -67,6 +67,8 @@
 "dashboard.area.list.new" = "Neu gesehen";
 "dashboard.area.list.disappeared" = "Verschwunden";
 "dashboard.area.list.empty" = "Keine Einträge";
+"dashboard.platformNote.title" = "Plattformhinweis";
+"dashboard.platformNote.body" = "Lassen Sie das Telefon während des aktiven Scans eingeschaltet.";
 "dashboard.hero.badge" = "Offline-Erhebungsmodus";
 "dashboard.hero.title" = "Stadtweite Offline-Wi-Fi-Kartierung";
 "dashboard.hero.subtitle" = "Bewegungen verfolgen, lokale Beobachtungen aufzeichnen und die gesamte Erhebungsdatenbank auf dem Gerät halten.";
