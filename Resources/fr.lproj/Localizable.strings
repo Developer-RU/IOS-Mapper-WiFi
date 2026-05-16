@@ -1,0 +1,246 @@
+"tab.dashboard" = "Tableau";
+"tab.map" = "Carte";
+"tab.database" = "Base";
+"tab.analytics" = "Analytique";
+"tab.history" = "Historique";
+"tab.settings" = "Réglages";
+
+"demo.mode.active" = "Mode démo actif";
+
+"settings.appearance.title" = "Apparence";
+"settings.appearance.picker" = "Thème";
+"settings.appearance.system" = "Système";
+"settings.appearance.light" = "Clair";
+"settings.appearance.dark" = "Sombre";
+
+"settings.language.title" = "Langue";
+"settings.language.picker" = "Langue";
+"settings.language.system" = "Système";
+"settings.language.english" = "English";
+"settings.language.russian" = "Русский";
+"settings.language.spanish" = "Español";
+"settings.language.german" = "Deutsch";
+"settings.language.french" = "Français";
+"settings.language.italian" = "Italiano";
+"settings.language.japanese" = "日本語";
+
+"settings.textSize.title" = "Taille du texte";
+"settings.textSize.picker" = "Taille du texte";
+"settings.textSize.system" = "Système";
+"settings.textSize.xSmall" = "Très petit";
+"settings.textSize.small" = "Petit";
+"settings.textSize.medium" = "Moyen";
+"settings.textSize.large" = "Grand";
+"settings.textSize.xLarge" = "Très grand";
+"settings.textSize.xxLarge" = "XX Grand";
+"settings.textSize.xxxLarge" = "XXX Grand";
+
+"settings.scanInterval.title" = "Intervalle de scan";
+"settings.scanInterval.mode" = "Mode";
+
+"settings.performance.title" = "Performance";
+"settings.performance.aggressive" = "Scan agressif";
+"settings.performance.batterySaver" = "Économie d'énergie";
+"settings.performance.highAccuracyGps" = "GPS haute précision";
+"settings.performance.backgroundScanning" = "Scan en arrière-plan";
+"settings.performance.autoSave" = "Sauvegarde auto";
+"settings.performance.demoMode" = "Mode démo";
+
+"dashboard.header.eyebrow" = "Console terrain";
+"dashboard.header.title" = "Explorez la ville sans le bruit.";
+"dashboard.header.subtitle" = "Cartographie Wi-Fi hors ligne avec conscience du trajet, persistance locale et intelligence du signal en direct.";
+"dashboard.demo.subtitle" = "Des observations locales synthétiques sont utilisées pour alimenter le tableau de bord, la carte et les vues analytiques.";
+"dashboard.kpi.networks.title" = "Réseaux";
+"dashboard.kpi.networks.subtitle" = "Enregistrements uniques";
+"dashboard.kpi.samples.title" = "Échantillons";
+"dashboard.kpi.samples.subtitle" = "Observations stockées";
+"dashboard.kpi.location.title" = "Position";
+"dashboard.kpi.currentSsid.title" = "SSID actuel";
+"dashboard.kpi.currentSsid.subtitle %@" = "Dernier scan %@";
+"dashboard.area.title" = "Comparaison de zone";
+"dashboard.area.radius %lld %@" = "Rayon %lld m autour de %@";
+"dashboard.area.metric.current" = "Actuel";
+"dashboard.area.metric.new" = "Nouveau";
+"dashboard.area.metric.gone" = "Disparu";
+"dashboard.area.metric.stable" = "Stable";
+"dashboard.area.strongest %@" = "Plus fort à proximité : %@";
+"dashboard.area.list.new" = "Récemment vu";
+"dashboard.area.list.disappeared" = "Disparu";
+"dashboard.area.list.empty" = "Aucune entrée";
+"dashboard.platformNote.title" = "Note de plateforme";
+"dashboard.hero.badge" = "Mode relevé hors ligne";
+"dashboard.hero.title" = "Cartographie Wi-Fi hors ligne à l'échelle de la ville";
+"dashboard.hero.subtitle" = "Suivez les déplacements, capturez les observations locales et gardez toute la base de données sur l'appareil.";
+"dashboard.hero.stopScan" = "Arrêter le scan";
+"dashboard.hero.startScan" = "Lancer le scan";
+"dashboard.hero.permissions" = "Autorisations";
+"dashboard.hero.activeSession %@" = "Session active : %@";
+"analytics.header.eyebrow" = "Intelligence du signal";
+"analytics.header.title" = "Voir le paysage radio.";
+"analytics.header.subtitle" = "Distribution, congestion et analyses de tendances issues des observations locales.";
+"analytics.kpi.networks.title" = "Réseaux";
+"analytics.kpi.networks.subtitle" = "Stocké localement";
+"analytics.kpi.observations.title" = "Observations";
+"analytics.kpi.observations.subtitle" = "Données historiques";
+"analytics.kpi.open.title" = "Ouvert";
+"analytics.kpi.open.subtitle" = "Exposition potentielle";
+"analytics.kpi.avgRssi.title" = "RSSI moyen";
+"analytics.kpi.avgScans.title" = "Scans moyens";
+"analytics.kpi.avgScans.subtitle" = "Par réseau dans la plage";
+"analytics.kpi.window.title" = "Fenêtre";
+"analytics.kpi.window.subtitle" = "Plage d'analyse actuelle";
+"analytics.filters.title" = "Filtres analytiques";
+"analytics.filters.date" = "Date";
+"analytics.filters.sort" = "Trier";
+"analytics.filters.openOnly" = "Réseaux ouverts uniquement";
+"analytics.filters.minScans %lld" = "Nombre minimum de scans : %lld";
+"analytics.bandDistribution.title" = "Distribution par bande";
+"analytics.securityMix.title" = "Mix de sécurité";
+"analytics.channelCongestion.title" = "Congestion des canaux";
+"analytics.observationTrend.title" = "Tendance des observations";
+"analytics.latestNetworks.title" = "Derniers réseaux";
+"database.header.eyebrow" = "Archive";
+"database.header.title" = "Coffre-fort de réseaux locaux.";
+"database.header.subtitle" = "Filtres rapides, recherche instantanée et export sans nuage.";
+"database.filters.title" = "Filtres";
+"database.filters.search" = "SSID ou BSSID";
+"database.filters.openOnly" = "Réseaux ouverts uniquement";
+"database.filters.sort" = "Trier";
+"database.filters.date" = "Date";
+"database.filters.minScans %lld" = "Nb min. de scans : %lld";
+"database.filters.channel" = "Canal";
+"database.filters.channel.any" = "Tous";
+"database.filters.reset" = "Réinitialiser les filtres";
+"database.savedNetworks.title" = "Réseaux enregistrés";
+"database.savedNetworks.empty" = "Aucun enregistrement. Lancez un scan ou activez le mode démo.";
+"database.export.title" = "Exporter";
+"database.export.share" = "Partager le dernier export";
+"history.header.eyebrow" = "Scan delta";
+"history.header.title" = "Qu'est-ce qui a changé ici ?";
+"history.header.subtitle" = "Comparez la zone actuelle avec l'historique stocké pour détecter les réseaux apparus ou disparus.";
+"history.hero.badge" = "Delta historique";
+"history.hero.title" = "Analyse de revisite";
+"history.hero.subtitle" = "Comparez la zone actuelle avec les observations locales et détectez les réseaux nouveaux, stables ou disparus.";
+"history.hero.center %@" = "Centre : %@";
+"history.hero.radius" = "Rayon";
+"history.hero.window" = "Fenêtre";
+"history.kpi.new.title" = "Nouveaux";
+"history.kpi.new.subtitle" = "Apparus récemment";
+"history.kpi.stable.title" = "Stables";
+"history.kpi.stable.subtitle" = "Présents dans les deux fenêtres";
+"history.kpi.missing.title" = "Manquants";
+"history.kpi.missing.subtitle" = "Vus auparavant";
+"history.kpi.strongest.title" = "Plus fort";
+"history.kpi.strongest.subtitle" = "Meilleur signal dans la zone";
+"history.section.new" = "Nouvellement découverts";
+"history.section.stable" = "Présence stable";
+"history.section.disappeared" = "Disparus";
+"history.section.empty" = "Aucun élément dans ce segment.";
+"map.header.title" = "Atlas du signal";
+"map.header.subtitle" = "Superpositions en direct, clusters de densité et trace de trajet";
+"map.demo.subtitle" = "Les superpositions de carte montrent actuellement des données de démo plutôt que des observations du réseau associé.";
+"map.style.picker" = "Style de carte";
+"map.filter.title" = "Filtres";
+"map.filter.search" = "Recherche";
+"map.filter.search.placeholder" = "SSID ou BSSID";
+"map.filter.signal" = "Signal";
+"map.filter.minRssi %lld" = "RSSI minimum : %lld dBm";
+"map.filter.channel" = "Canal";
+"map.filter.channel.any" = "Tous";
+"map.filter.bands" = "Bandes";
+"map.filter.security" = "Sécurité";
+"map.filter.openOnly" = "Ouvert seulement";
+"map.filter.reset" = "Réinitialiser";
+"networkDetails.title" = "Détails du réseau";
+"networkDetails.lastSeen %@" = "Vu pour la dernière fois %@";
+"networkDetails.signalHistory" = "Historique du signal";
+"networkDetails.security" = "Sécurité";
+"networkDetails.band" = "Bande";
+"networkDetails.frequency" = "Fréquence";
+"networkDetails.channel" = "Canal";
+"networkDetails.encryption" = "Chiffrement";
+"networkDetails.captivePortal" = "Portail captif";
+"networkDetails.authHint" = "Indication d'auth";
+"networkDetails.coordinates" = "Coordonnées";
+"networkDetails.scanCount" = "Nombre de scans";
+"networkDetails.unavailable" = "Non disponible";
+"networkDetails.notDetected" = "Non détecté";
+"splash.title" = "WiFi Mapper";
+"splash.subtitle" = "Intelligence du signal hors ligne";
+"settings.header.eyebrow" = "Centre de contrôle";
+"settings.header.title" = "Régler le scanner.";
+"settings.header.subtitle" = "Équilibrez précision, batterie et comportement en arrière-plan pour votre flux de travail.";
+"settings.quality.title" = "Seuils de qualité";
+"settings.quality.repeatedChecks %lld" = "Vérifications répétées : %lld";
+"settings.quality.retryCount %lld" = "Nombre de tentatives : %lld";
+"settings.quality.signalThreshold %lld" = "Seuil de signal : %lld dBm";
+"settings.quality.ignoreWeak" = "Ignorer les réseaux faibles";
+"settings.readiness.title" = "Préparation iPhone";
+"settings.readiness.buildTarget" = "Cible de compilation";
+"settings.readiness.buildTarget.value" = "iPhone physique requis pour les données d'association Wi-Fi réelles";
+"settings.readiness.locationMode" = "Mode de localisation";
+"settings.readiness.locationMode.value" = "Always + localisation en arrière-plan";
+"settings.readiness.localNetwork" = "Réseau local";
+"settings.readiness.localNetwork.value" = "Autorisation requise pour les diagnostics";
+"settings.readiness.note" = "Les API iOS publiques ne permettent pas le scan passif de tous les réseaux Wi-Fi à proximité. L'app enregistre le réseau actuellement associé ainsi que le GPS/historique en local.";
+"settings.demoData.title" = "Données de démo";
+"settings.demoData.generate" = "Générer un jeu de démo";
+
+// WiFi Band
+"wifi.band.24" = "2,4 GHz";
+"wifi.band.5" = "5 GHz";
+"wifi.band.6" = "6 GHz";
+"wifi.band.unknown" = "Inconnu";
+
+// WiFi Security
+"wifi.security.open" = "Ouvert";
+"wifi.security.wpa" = "WPA";
+"wifi.security.wpa2" = "WPA2";
+"wifi.security.wpa3" = "WPA3";
+"wifi.security.secure" = "Sécurisé";
+"wifi.security.unknown" = "Inconnu";
+
+// Scanner Mode
+"scanner.mode.continuous" = "Continu";
+"scanner.mode.every5s" = "Toutes les 5 s";
+"scanner.mode.every10s" = "Toutes les 10 s";
+"scanner.mode.every30s" = "Toutes les 30 s";
+"scanner.mode.everyMinute" = "Chaque minute";
+
+// Map Layer
+"map.layer.points" = "Points";
+"map.layer.heatmap" = "Carte de chaleur";
+"map.layer.congestion" = "Congestion";
+"map.layer.route" = "Itinéraire";
+
+// Map Style
+"map.style.standard" = "Rues";
+"map.style.hybrid" = "Hybride";
+"map.style.imagery" = "Satellite";
+
+// Sort Order
+"sort.newest" = "Plus récents";
+"sort.strongest" = "Plus forts";
+"sort.mostSeen" = "Plus vus";
+"sort.ssid" = "SSID";
+
+// Time Scope
+"timeScope.all" = "Tout le temps";
+"timeScope.24h" = "24h";
+"timeScope.7d" = "7 jours";
+"timeScope.30d" = "30 jours";
+
+// Comparison Window
+"comparison.1h" = "1h";
+"comparison.24h" = "24h";
+"comparison.7d" = "7j";
+"comparison.all" = "Tout";
+
+// Location Status
+"location.status.notAuthorized" = "Non autorisé";
+"location.status.always" = "Toujours";
+"location.status.whenInUse" = "En utilisation";
+"location.status.denied" = "Refusé";
+"location.status.restricted" = "Restreint";
+"location.status.pending" = "En attente";
+"location.status.unknown" = "Inconnu";

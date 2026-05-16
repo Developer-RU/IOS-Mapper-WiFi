@@ -1,0 +1,63 @@
+name: WiFiMapper
+options:
+  bundleIdPrefix: com.pavelmasyukov
+  deploymentTarget:
+    iOS: 18.0
+packages: {}
+targets:
+  WiFiMapperCore:
+    type: framework
+    platform: iOS
+    sources:
+      - path: Sources/Models
+      - path: Sources/Persistence
+      - path: Sources/Services/DemoDataFactory.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.WiFiMapperCore
+        PRODUCT_NAME: WiFiMapperCore
+        SWIFT_VERSION: 5.0
+        GENERATE_INFOPLIST_FILE: YES
+  WiFiMapper:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+        excludes:
+          - Models/**
+          - Persistence/**
+          - Services/DemoDataFactory.swift
+    resources:
+      - path: Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.WiFiMapper
+        PRODUCT_NAME: WiFiMapper
+        SWIFT_VERSION: 5.0
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0.0
+        GENERATE_INFOPLIST_FILE: NO
+        INFOPLIST_FILE: Resources/Info.plist
+        TARGETED_DEVICE_FAMILY: 1
+        SUPPORTS_MACCATALYST: NO
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        CODE_SIGN_ENTITLEMENTS: Resources/WiFiMapper.entitlements
+    dependencies:
+      - target: WiFiMapperCore
+    entitlements:
+      path: Resources/WiFiMapper.entitlements
+    scheme:
+      testTargets:
+        - WiFiMapperTests
+  WiFiMapperTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: WiFiMapperCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.WiFiMapperTests
+        SWIFT_VERSION: 5.0
+        GENERATE_INFOPLIST_FILE: YES

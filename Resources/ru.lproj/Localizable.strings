@@ -1,0 +1,253 @@
+"tab.dashboard" = "Дашборд";
+"tab.map" = "Карта";
+"tab.database" = "База";
+"tab.analytics" = "Аналитика";
+"tab.history" = "История";
+"tab.settings" = "Настройки";
+
+"demo.mode.active" = "Демо-режим активен";
+
+"settings.appearance.title" = "Оформление";
+"settings.appearance.picker" = "Тема";
+"settings.appearance.system" = "Системная";
+"settings.appearance.light" = "Светлая";
+"settings.appearance.dark" = "Тёмная";
+
+"settings.language.title" = "Язык";
+"settings.language.picker" = "Язык";
+"settings.language.system" = "Системный";
+"settings.language.english" = "English";
+"settings.language.russian" = "Русский";
+"settings.language.spanish" = "Español";
+"settings.language.german" = "Deutsch";
+"settings.language.french" = "Français";
+"settings.language.italian" = "Italiano";
+"settings.language.japanese" = "日本語";
+
+"settings.textSize.title" = "Размер текста";
+"settings.textSize.picker" = "Размер текста";
+"settings.textSize.system" = "Системный";
+"settings.textSize.xSmall" = "Очень маленький";
+"settings.textSize.small" = "Маленький";
+"settings.textSize.medium" = "Средний";
+"settings.textSize.large" = "Большой";
+"settings.textSize.xLarge" = "Очень большой";
+"settings.textSize.xxLarge" = "XX Большой";
+"settings.textSize.xxxLarge" = "XXX Большой";
+
+"settings.scanInterval.title" = "Интервал сканирования";
+"settings.scanInterval.mode" = "Режим";
+
+"settings.performance.title" = "Производительность";
+"settings.performance.aggressive" = "Агрессивное сканирование";
+"settings.performance.batterySaver" = "Экономия батареи";
+"settings.performance.highAccuracyGps" = "Высокая точность GPS";
+"settings.performance.backgroundScanning" = "Фоновое сканирование";
+"settings.performance.autoSave" = "Автосохранение";
+"settings.performance.demoMode" = "Демо-режим";
+
+"dashboard.header.eyebrow" = "Полевой центр";
+"dashboard.header.title" = "Исследуйте город без лишнего шума.";
+"dashboard.header.subtitle" = "Оффлайн-картирование Wi-Fi с учётом маршрутов, локальным хранилищем и аналитикой сигнала.";
+"dashboard.demo.subtitle" = "Синтетические локальные наблюдения используются для заполнения дашборда, карты и аналитики.";
+"dashboard.kpi.networks.title" = "Сети";
+"dashboard.kpi.networks.subtitle" = "Уникальные записи";
+"dashboard.kpi.samples.title" = "Сэмплы";
+"dashboard.kpi.samples.subtitle" = "Сохранённые наблюдения";
+"dashboard.kpi.location.title" = "Локация";
+"dashboard.kpi.currentSsid.title" = "Текущий SSID";
+"dashboard.kpi.currentSsid.subtitle %@" = "Последний скан %@";
+"dashboard.area.title" = "Сравнение зоны";
+"dashboard.area.radius %lld %@" = "Радиус %lld м вокруг %@";
+"dashboard.area.metric.current" = "Текущие";
+"dashboard.area.metric.new" = "Новые";
+"dashboard.area.metric.gone" = "Исчезли";
+"dashboard.area.metric.stable" = "Стабильные";
+"dashboard.area.strongest %@" = "Самый сильный рядом: %@";
+"dashboard.area.list.new" = "Новые";
+"dashboard.area.list.disappeared" = "Исчезнувшие";
+"dashboard.area.list.empty" = "Нет записей";
+"dashboard.platformNote.title" = "Примечание платформы";
+"dashboard.hero.badge" = "Оффлайн режим обследования";
+"dashboard.hero.title" = "Оффлайн-картирование Wi-Fi городского уровня";
+"dashboard.hero.subtitle" = "Отслеживайте перемещение, сохраняйте локальные наблюдения и держите базу обследования на устройстве.";
+"dashboard.hero.stopScan" = "Остановить скан";
+"dashboard.hero.startScan" = "Начать скан";
+"dashboard.hero.permissions" = "Разрешения";
+"dashboard.hero.activeSession %@" = "Активная сессия: %@";
+
+"analytics.header.eyebrow" = "Интеллект сигнала";
+"analytics.header.title" = "Посмотрите на радиоландшафт.";
+"analytics.header.subtitle" = "Распределение, загруженность и тренды, построенные на локальных наблюдениях.";
+"analytics.kpi.networks.title" = "Сети";
+"analytics.kpi.networks.subtitle" = "Сохранено локально";
+"analytics.kpi.observations.title" = "Наблюдения";
+"analytics.kpi.observations.subtitle" = "Исторические сэмплы";
+"analytics.kpi.open.title" = "Открытые";
+"analytics.kpi.open.subtitle" = "Потенциальный риск";
+"analytics.kpi.avgRssi.title" = "Средний RSSI";
+"analytics.kpi.avgScans.title" = "Среднее сканов";
+"analytics.kpi.avgScans.subtitle" = "На сеть в выбранном диапазоне";
+"analytics.kpi.window.title" = "Окно";
+"analytics.kpi.window.subtitle" = "Текущий диапазон аналитики";
+"analytics.filters.title" = "Фильтры аналитики";
+"analytics.filters.date" = "Дата";
+"analytics.filters.sort" = "Сортировка";
+"analytics.filters.openOnly" = "Только открытые сети";
+"analytics.filters.minScans %lld" = "Минимум сканов: %lld";
+"analytics.bandDistribution.title" = "Распределение по диапазонам";
+"analytics.securityMix.title" = "Распределение безопасности";
+"analytics.channelCongestion.title" = "Загруженность каналов";
+"analytics.observationTrend.title" = "Тренд наблюдений";
+"analytics.latestNetworks.title" = "Последние сети";
+
+"database.header.eyebrow" = "Архив";
+"database.header.title" = "Локальное хранилище сетей.";
+"database.header.subtitle" = "Быстрые фильтры, мгновенный поиск и экспорт без облака.";
+"database.filters.title" = "Фильтры";
+"database.filters.search" = "SSID или BSSID";
+"database.filters.openOnly" = "Только открытые сети";
+"database.filters.sort" = "Сортировка";
+"database.filters.date" = "Дата";
+"database.filters.minScans %lld" = "Мин. число сканов: %lld";
+"database.filters.channel" = "Канал";
+"database.filters.channel.any" = "Любой";
+"database.filters.reset" = "Сбросить фильтры";
+"database.savedNetworks.title" = "Сохранённые сети";
+"database.savedNetworks.empty" = "Записей пока нет. Запустите скан или включите демо-режим.";
+"database.export.title" = "Экспорт";
+"database.export.share" = "Поделиться последним экспортом";
+
+"history.header.eyebrow" = "Дельта-скан";
+"history.header.title" = "Что изменилось здесь?";
+"history.header.subtitle" = "Сравните текущую зону с историей и найдите появившиеся или исчезнувшие сети.";
+"history.hero.badge" = "Историческая дельта";
+"history.hero.title" = "Анализ повторного визита";
+"history.hero.subtitle" = "Сравните текущую область с локальной историей и найдите новые, стабильные и пропавшие сети.";
+"history.hero.center %@" = "Центр: %@";
+"history.hero.radius" = "Радиус";
+"history.hero.window" = "Окно";
+"history.kpi.new.title" = "Новые";
+"history.kpi.new.subtitle" = "Недавно появились";
+"history.kpi.stable.title" = "Стабильные";
+"history.kpi.stable.subtitle" = "Есть в обоих окнах";
+"history.kpi.missing.title" = "Пропали";
+"history.kpi.missing.subtitle" = "Были раньше";
+"history.kpi.strongest.title" = "Сильнейшая";
+"history.kpi.strongest.subtitle" = "Лучший сигнал в зоне";
+"history.section.new" = "Новые";
+"history.section.stable" = "Стабильные";
+"history.section.disappeared" = "Исчезнувшие";
+"history.section.empty" = "В этом срезе нет элементов.";
+
+"map.header.title" = "Атлас сигнала";
+"map.header.subtitle" = "Живые оверлеи, кластеры плотности и трек маршрута";
+"map.demo.subtitle" = "Оверлеи карты сейчас показывают демо-данные, а не живые наблюдения подключённой сети.";
+"map.style.picker" = "Стиль карты";
+"map.filter.title" = "Фильтры";
+"map.filter.search" = "Поиск";
+"map.filter.search.placeholder" = "SSID или BSSID";
+"map.filter.signal" = "Сигнал";
+"map.filter.minRssi %lld" = "Минимальный RSSI: %lld dBm";
+"map.filter.channel" = "Канал";
+"map.filter.channel.any" = "Любой";
+"map.filter.bands" = "Диапазоны";
+"map.filter.security" = "Безопасность";
+"map.filter.openOnly" = "Только открытые";
+"map.filter.reset" = "Сброс";
+
+"networkDetails.title" = "Детали сети";
+"networkDetails.lastSeen %@" = "Последний раз: %@";
+"networkDetails.signalHistory" = "История сигнала";
+"networkDetails.security" = "Безопасность";
+"networkDetails.band" = "Диапазон";
+"networkDetails.frequency" = "Частота";
+"networkDetails.channel" = "Канал";
+"networkDetails.encryption" = "Шифрование";
+"networkDetails.captivePortal" = "Captive portal";
+"networkDetails.authHint" = "Подсказка авторизации";
+"networkDetails.coordinates" = "Координаты";
+"networkDetails.scanCount" = "Число сканов";
+"networkDetails.unavailable" = "Недоступно";
+"networkDetails.notDetected" = "Не обнаружено";
+
+"splash.title" = "WiFi Mapper";
+"splash.subtitle" = "Оффлайн-аналитика сигнала";
+
+"settings.header.eyebrow" = "Центр управления";
+"settings.header.title" = "Настройте сканер.";
+"settings.header.subtitle" = "Балансируйте точность, батарею и фоновую работу под ваш сценарий обследования.";
+"settings.quality.title" = "Пороги качества";
+"settings.quality.repeatedChecks %lld" = "Повторные проверки: %lld";
+"settings.quality.retryCount %lld" = "Число повторов: %lld";
+"settings.quality.signalThreshold %lld" = "Порог сигнала: %lld dBm";
+"settings.quality.ignoreWeak" = "Игнорировать слабые сети";
+"settings.readiness.title" = "Готовность iPhone";
+"settings.readiness.buildTarget" = "Целевая сборка";
+"settings.readiness.buildTarget.value" = "Для реальных данных Wi-Fi ассоциации нужен физический iPhone";
+"settings.readiness.locationMode" = "Режим геолокации";
+"settings.readiness.locationMode.value" = "Always + фоновая геолокация";
+"settings.readiness.localNetwork" = "Локальная сеть";
+"settings.readiness.localNetwork.value" = "Нужно разрешение для диагностики";
+"settings.readiness.note" = "Публичные API iOS не позволяют пассивно сканировать все ближайшие Wi-Fi сети. Приложение сохраняет текущую подключённую сеть и GPS/историю локально.";
+"settings.demoData.title" = "Демо-данные";
+"settings.demoData.generate" = "Сгенерировать демо-набор";
+
+// WiFi Band
+"wifi.band.24" = "2,4 ГГц";
+"wifi.band.5" = "5 ГГц";
+"wifi.band.6" = "6 ГГц";
+"wifi.band.unknown" = "Неизвестно";
+
+// WiFi Security
+"wifi.security.open" = "Открытая";
+"wifi.security.wpa" = "WPA";
+"wifi.security.wpa2" = "WPA2";
+"wifi.security.wpa3" = "WPA3";
+"wifi.security.secure" = "Защищённая";
+"wifi.security.unknown" = "Неизвестно";
+
+// Scanner Mode
+"scanner.mode.continuous" = "Непрерывно";
+"scanner.mode.every5s" = "Каждые 5 сек";
+"scanner.mode.every10s" = "Каждые 10 сек";
+"scanner.mode.every30s" = "Каждые 30 сек";
+"scanner.mode.everyMinute" = "Каждую минуту";
+
+// Map Layer
+"map.layer.points" = "Точки";
+"map.layer.heatmap" = "Тепловая карта";
+"map.layer.congestion" = "Загруженность";
+"map.layer.route" = "Маршрут";
+
+// Map Style
+"map.style.standard" = "Улицы";
+"map.style.hybrid" = "Гибрид";
+"map.style.imagery" = "Спутник";
+
+// Sort Order
+"sort.newest" = "Новейшие";
+"sort.strongest" = "Сильнейшие";
+"sort.mostSeen" = "Часто встречаемые";
+"sort.ssid" = "SSID";
+
+// Time Scope
+"timeScope.all" = "Всё время";
+"timeScope.24h" = "24 ч";
+"timeScope.7d" = "7 дней";
+"timeScope.30d" = "30 дней";
+
+// Comparison Window
+"comparison.1h" = "1 ч";
+"comparison.24h" = "24 ч";
+"comparison.7d" = "7 д";
+"comparison.all" = "Все";
+
+// Location Status
+"location.status.notAuthorized" = "Нет доступа";
+"location.status.always" = "Всегда";
+"location.status.whenInUse" = "При использовании";
+"location.status.denied" = "Запрещено";
+"location.status.restricted" = "Ограничено";
+"location.status.pending" = "Ожидание";
+"location.status.unknown" = "Неизвестно";

@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D7D68C4CF5C4B1341CAFCA /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC6325F6941D14F9146660C /* LocationService.swift */; };
+		0B281ED72AC938553AEC2C26 /* NetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846B02B18205C135D80B3629 /* NetworkRepository.swift */; };
+		0BDC52B540C94778087B5A25 /* HistoryComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2299EDFFA5C3EB1D35EB3105 /* HistoryComparisonView.swift */; };
+		0E871B497CA8EBE12392AC70 /* WiFiMapperCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; };
+		0EF4E1370495FF9F5B896EBE /* DatabaseBrowserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A64013E1EA1032A9F3651 /* DatabaseBrowserViewModel.swift */; };
+		11138140FBC7838C64D5B9AF /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27872C9E465E42AB4B731064 /* AppModel.swift */; };
+		132EB90D5E376CE17E72CB4E /* DatabaseBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90775675DD045CD3AFD9ACDA /* DatabaseBrowserView.swift */; };
+		24A718E8A3D7270C4E5B1922 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D568C9E796353C33AD199158 /* ExportService.swift */; };
+		258B6F77026CE7B63935A75B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7047DB2CEFED33357E1F5DF /* ContentView.swift */; };
+		2A658FEBFDCBC70EEB9BD0F2 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8776A87A1DA1601464E0049 /* MapViewModel.swift */; };
+		2CBE7EA316A970F4809F3449 /* CoreDataModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68C147C348AAFAA3C626062 /* CoreDataModelBuilder.swift */; };
+		330DFDE7CC7508FA3C6C60D4 /* WiFiMapperCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; };
+		36C019E8DE89286A6C38FACD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E87F0D79B1791B3B2721C51 /* PersistenceController.swift */; };
+		36D42C28A194173052E7BBF3 /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC95439DAFDAFCFE4ED71925 /* PermissionService.swift */; };
+		39992766253C1B05F05952D3 /* DemoDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */; };
+		3BC11F94610DAAF865549331 /* BackgroundTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */; };
+		3F38082EF91A7C1BE2F7A578 /* DemoDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647CB52DCF8C46878A2DE5E /* DemoDataFactoryTests.swift */; };
+		46B1C2905C0232E7BDCDC5C1 /* WiFiMapperCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E1E75A8E97DBDD3D2546616 /* HeatmapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF6541D7B76330F3C360E8 /* HeatmapOverlay.swift */; };
+		5A5DBA35966D9236BA49F247 /* WiFiMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C6FABE06A37B16ED3CB2F /* WiFiMapperApp.swift */; };
+		6BD0639AEEEBF4F0881A4E5F /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020668254C457B3A6172D3E /* MapScreen.swift */; };
+		844874CFE2884D2259A0F10F /* HistoryComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD61BF23FA3E37B9B57910 /* HistoryComparisonViewModel.swift */; };
+		85B091FB9A8C77A0CE39B0A3 /* WiFiScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27718026DB1021C777571D2B /* WiFiScannerService.swift */; };
+		88BFBF0B990B4D3A88F244A6 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B2A748A0519C1F79DA7993 /* AnalyticsView.swift */; };
+		88D9D7852B8D1066FC8DEEA9 /* WiFiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B295EB2B184B34F38E6AA5 /* WiFiModels.swift */; };
+		8A714EFCD2F8C6ECDC743F3C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AAE947DF2B358A819737BA /* SettingsView.swift */; };
+		8B3AE7B02A5F508011080157 /* WiFiMapperCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8F7DCDFEA12AB420349BBE76 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA03B0497F5F9C2A604B23 /* DashboardViewModel.swift */; };
+		AABBCCEE00EE00EE00EE00EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AABBCCDD00DD00DD00DD00DD /* Localizable.strings */; };
+		AAF7D08A3717516F34BFC92B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD9D17F163FD5D2A27009F5 /* SplashView.swift */; };
+		AECE7A985BDA57BE138FDF8E /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A901B1B8FDF91BD3B31743 /* MapViewRepresentable.swift */; };
+		B6353540F640650A7BBE61C2 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A9B97BF9BFB0FDCFCE70D /* AnalyticsViewModel.swift */; };
+		BFA1C97B3211898A6B497433 /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E149DD02E8A3C7EF7024F98 /* UIComponents.swift */; };
+		DBCC198406BAB9DF885F66C3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58A1715E0B164315916109E4 /* SettingsViewModel.swift */; };
+		E465E800368761C77043CB9C /* NetworkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049DA7EF2EAD2937EE42F37 /* NetworkDetailsView.swift */; };
+		F462372973C9ECC7D842717E /* NetworkRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93887EE64C117247D48768E1 /* NetworkRepositoryTests.swift */; };
+		FE2E1D59793912C64211D727 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9F6C36F05B5E3504ED0B20 /* DashboardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21E846EE9D9994F5B25C7D0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3577ECB962C91DEFBAE21D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F0FFB785BDB6C63FD1A1EF;
+			remoteInfo = WiFiMapperCore;
+		};
+		9CEF2FC52E74E3143B8D72BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3577ECB962C91DEFBAE21D37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F0FFB785BDB6C63FD1A1EF;
+			remoteInfo = WiFiMapperCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		436385EBF03920C45A4C5BF5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				46B1C2905C0232E7BDCDC5C1 /* WiFiMapperCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80B2B64D8926653FAD875E2C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8B3AE7B02A5F508011080157 /* WiFiMapperCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00B295EB2B184B34F38E6AA5 /* WiFiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiModels.swift; sourceTree = "<group>"; };
+		18CA03B0497F5F9C2A604B23 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		2299EDFFA5C3EB1D35EB3105 /* HistoryComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryComparisonView.swift; sourceTree = "<group>"; };
+		232F8CDAEFBD771C9790B1A7 /* WiFiMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27718026DB1021C777571D2B /* WiFiScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiScannerService.swift; sourceTree = "<group>"; };
+		27872C9E465E42AB4B731064 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskService.swift; sourceTree = "<group>"; };
+		3E87F0D79B1791B3B2721C51 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		48A901B1B8FDF91BD3B31743 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		58A1715E0B164315916109E4 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		6020668254C457B3A6172D3E /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		682A9B97BF9BFB0FDCFCE70D /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		7CD9D17F163FD5D2A27009F5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7D0A64013E1EA1032A9F3651 /* DatabaseBrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseBrowserViewModel.swift; sourceTree = "<group>"; };
+		846B02B18205C135D80B3629 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		8E149DD02E8A3C7EF7024F98 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		9049DA7EF2EAD2937EE42F37 /* NetworkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailsView.swift; sourceTree = "<group>"; };
+		90775675DD045CD3AFD9ACDA /* DatabaseBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseBrowserView.swift; sourceTree = "<group>"; };
+		93887EE64C117247D48768E1 /* NetworkRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepositoryTests.swift; sourceTree = "<group>"; };
+		9C9F6C36F05B5E3504ED0B20 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		9D0C6FABE06A37B16ED3CB2F /* WiFiMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMapperApp.swift; sourceTree = "<group>"; };
+		AABBCC110011001100110011 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC220022002200220022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC330033003300330033 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC440044004400440044 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC550055005500550055 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC660066006600660066 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AABBCC770077007700770077 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiFiMapperCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDDF6541D7B76330F3C360E8 /* HeatmapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapOverlay.swift; sourceTree = "<group>"; };
+		C89104144D6E8BDC91EF5C58 /* WiFiMapperTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WiFiMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDataFactory.swift; sourceTree = "<group>"; };
+		D0AAE947DF2B358A819737BA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D568C9E796353C33AD199158 /* ExportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
+		D5B2A748A0519C1F79DA7993 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		D7047DB2CEFED33357E1F5DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DCAD61BF23FA3E37B9B57910 /* HistoryComparisonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryComparisonViewModel.swift; sourceTree = "<group>"; };
+		DFC6325F6941D14F9146660C /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		E68C147C348AAFAA3C626062 /* CoreDataModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModelBuilder.swift; sourceTree = "<group>"; };
+		E8776A87A1DA1601464E0049 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F647CB52DCF8C46878A2DE5E /* DemoDataFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDataFactoryTests.swift; sourceTree = "<group>"; };
+		FC95439DAFDAFCFE4ED71925 /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A45F87418364D8077364630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E871B497CA8EBE12392AC70 /* WiFiMapperCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B3FF84D32659B442DCA0FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				330DFDE7CC7508FA3C6C60D4 /* WiFiMapperCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3676088F146D9A017668E3B9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F647CB52DCF8C46878A2DE5E /* DemoDataFactoryTests.swift */,
+				93887EE64C117247D48768E1 /* NetworkRepositoryTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		633C7710C17706A700E6B5D8 = {
+			isa = PBXGroup;
+			children = (
+				AABBCCDD00DD00DD00DD00DD /* Localizable.strings */,
+				8A753C4F65B17DB025047788 /* Models */,
+				861A47492219105CF88B49B1 /* Persistence */,
+				D5F443F8A9D0DCFBC11DDFD6 /* Sources */,
+				3676088F146D9A017668E3B9 /* Tests */,
+				8134B52F364AE35B88D880B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		67F1B486B813E3019AA21059 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BDDF6541D7B76330F3C360E8 /* HeatmapOverlay.swift */,
+				48A901B1B8FDF91BD3B31743 /* MapViewRepresentable.swift */,
+				8E149DD02E8A3C7EF7024F98 /* UIComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7CB8B8AA91B6942FD75286C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27872C9E465E42AB4B731064 /* AppModel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8134B52F364AE35B88D880B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				232F8CDAEFBD771C9790B1A7 /* WiFiMapper.app */,
+				BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */,
+				C89104144D6E8BDC91EF5C58 /* WiFiMapperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		861A47492219105CF88B49B1 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				E68C147C348AAFAA3C626062 /* CoreDataModelBuilder.swift */,
+				846B02B18205C135D80B3629 /* NetworkRepository.swift */,
+				3E87F0D79B1791B3B2721C51 /* PersistenceController.swift */,
+			);
+			name = Persistence;
+			path = Sources/Persistence;
+			sourceTree = "<group>";
+		};
+		8A753C4F65B17DB025047788 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00B295EB2B184B34F38E6AA5 /* WiFiModels.swift */,
+			);
+			name = Models;
+			path = Sources/Models;
+			sourceTree = "<group>";
+		};
+		D5F443F8A9D0DCFBC11DDFD6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9D0C6FABE06A37B16ED3CB2F /* WiFiMapperApp.swift */,
+				7CB8B8AA91B6942FD75286C4 /* App */,
+				F6B4D428C88F174AF750015A /* Services */,
+				DAF07E18076574D96A20A422 /* ViewModels */,
+				EC35E9854899AEECD9BA9F7F /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DAF07E18076574D96A20A422 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				682A9B97BF9BFB0FDCFCE70D /* AnalyticsViewModel.swift */,
+				18CA03B0497F5F9C2A604B23 /* DashboardViewModel.swift */,
+				7D0A64013E1EA1032A9F3651 /* DatabaseBrowserViewModel.swift */,
+				DCAD61BF23FA3E37B9B57910 /* HistoryComparisonViewModel.swift */,
+				E8776A87A1DA1601464E0049 /* MapViewModel.swift */,
+				58A1715E0B164315916109E4 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EC35E9854899AEECD9BA9F7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5B2A748A0519C1F79DA7993 /* AnalyticsView.swift */,
+				D7047DB2CEFED33357E1F5DF /* ContentView.swift */,
+				9C9F6C36F05B5E3504ED0B20 /* DashboardView.swift */,
+				90775675DD045CD3AFD9ACDA /* DatabaseBrowserView.swift */,
+				2299EDFFA5C3EB1D35EB3105 /* HistoryComparisonView.swift */,
+				6020668254C457B3A6172D3E /* MapScreen.swift */,
+				9049DA7EF2EAD2937EE42F37 /* NetworkDetailsView.swift */,
+				D0AAE947DF2B358A819737BA /* SettingsView.swift */,
+				7CD9D17F163FD5D2A27009F5 /* SplashView.swift */,
+				67F1B486B813E3019AA21059 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6B4D428C88F174AF750015A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */,
+				C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */,
+				D568C9E796353C33AD199158 /* ExportService.swift */,
+				DFC6325F6941D14F9146660C /* LocationService.swift */,
+				FC95439DAFDAFCFE4ED71925 /* PermissionService.swift */,
+				27718026DB1021C777571D2B /* WiFiScannerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F7841DF1E0781E35B646AB2 /* WiFiMapperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6D0C312EF97C6F3566AF990 /* Build configuration list for PBXNativeTarget "WiFiMapperTests" */;
+			buildPhases = (
+				C3DC7521A63B7AE31851B66B /* Sources */,
+				4B3FF84D32659B442DCA0FE8 /* Frameworks */,
+				436385EBF03920C45A4C5BF5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D247B5BF5A2F554DAEFA3C5B /* PBXTargetDependency */,
+			);
+			name = WiFiMapperTests;
+			packageProductDependencies = (
+			);
+			productName = WiFiMapperTests;
+			productReference = C89104144D6E8BDC91EF5C58 /* WiFiMapperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84F0FFB785BDB6C63FD1A1EF /* WiFiMapperCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8FAF279F59BCF02E2B1F9A2 /* Build configuration list for PBXNativeTarget "WiFiMapperCore" */;
+			buildPhases = (
+				538375AAF8E723456C0F17A4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiMapperCore;
+			packageProductDependencies = (
+			);
+			productName = WiFiMapperCore;
+			productReference = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B6EEF65E637931B4AC8D7F0B /* WiFiMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1780ED4DD15B02AA001D6C20 /* Build configuration list for PBXNativeTarget "WiFiMapper" */;
+			buildPhases = (
+				AABBCCFF00FF00FF00FF00FF /* Resources */,
+				25B96E69829FF3521EEB0BC5 /* Sources */,
+				3A45F87418364D8077364630 /* Frameworks */,
+				80B2B64D8926653FAD875E2C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA8C21A376216B38366AE8B1 /* PBXTargetDependency */,
+			);
+			name = WiFiMapper;
+			packageProductDependencies = (
+			);
+			productName = WiFiMapper;
+			productReference = 232F8CDAEFBD771C9790B1A7 /* WiFiMapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3577ECB962C91DEFBAE21D37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+			};
+			buildConfigurationList = 6A68B8973135437578E9CF63 /* Build configuration list for PBXProject "WiFiMapper" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				de,
+				es,
+				fr,
+				it,
+				ja,
+				ru,
+			);
+			mainGroup = 633C7710C17706A700E6B5D8;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8134B52F364AE35B88D880B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B6EEF65E637931B4AC8D7F0B /* WiFiMapper */,
+				84F0FFB785BDB6C63FD1A1EF /* WiFiMapperCore */,
+				1F7841DF1E0781E35B646AB2 /* WiFiMapperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AABBCCFF00FF00FF00FF00FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABBCCEE00EE00EE00EE00EE /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25B96E69829FF3521EEB0BC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88BFBF0B990B4D3A88F244A6 /* AnalyticsView.swift in Sources */,
+				B6353540F640650A7BBE61C2 /* AnalyticsViewModel.swift in Sources */,
+				11138140FBC7838C64D5B9AF /* AppModel.swift in Sources */,
+				3BC11F94610DAAF865549331 /* BackgroundTaskService.swift in Sources */,
+				258B6F77026CE7B63935A75B /* ContentView.swift in Sources */,
+				FE2E1D59793912C64211D727 /* DashboardView.swift in Sources */,
+				8F7DCDFEA12AB420349BBE76 /* DashboardViewModel.swift in Sources */,
+				132EB90D5E376CE17E72CB4E /* DatabaseBrowserView.swift in Sources */,
+				0EF4E1370495FF9F5B896EBE /* DatabaseBrowserViewModel.swift in Sources */,
+				24A718E8A3D7270C4E5B1922 /* ExportService.swift in Sources */,
+				4E1E75A8E97DBDD3D2546616 /* HeatmapOverlay.swift in Sources */,
+				0BDC52B540C94778087B5A25 /* HistoryComparisonView.swift in Sources */,
+				844874CFE2884D2259A0F10F /* HistoryComparisonViewModel.swift in Sources */,
+				01D7D68C4CF5C4B1341CAFCA /* LocationService.swift in Sources */,
+				6BD0639AEEEBF4F0881A4E5F /* MapScreen.swift in Sources */,
+				2A658FEBFDCBC70EEB9BD0F2 /* MapViewModel.swift in Sources */,
+				AECE7A985BDA57BE138FDF8E /* MapViewRepresentable.swift in Sources */,
+				E465E800368761C77043CB9C /* NetworkDetailsView.swift in Sources */,
+				36D42C28A194173052E7BBF3 /* PermissionService.swift in Sources */,
+				8A714EFCD2F8C6ECDC743F3C /* SettingsView.swift in Sources */,
+				DBCC198406BAB9DF885F66C3 /* SettingsViewModel.swift in Sources */,
+				AAF7D08A3717516F34BFC92B /* SplashView.swift in Sources */,
+				BFA1C97B3211898A6B497433 /* UIComponents.swift in Sources */,
+				5A5DBA35966D9236BA49F247 /* WiFiMapperApp.swift in Sources */,
+				85B091FB9A8C77A0CE39B0A3 /* WiFiScannerService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		538375AAF8E723456C0F17A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CBE7EA316A970F4809F3449 /* CoreDataModelBuilder.swift in Sources */,
+				39992766253C1B05F05952D3 /* DemoDataFactory.swift in Sources */,
+				0B281ED72AC938553AEC2C26 /* NetworkRepository.swift in Sources */,
+				36C019E8DE89286A6C38FACD /* PersistenceController.swift in Sources */,
+				88D9D7852B8D1066FC8DEEA9 /* WiFiModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3DC7521A63B7AE31851B66B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F38082EF91A7C1BE2F7A578 /* DemoDataFactoryTests.swift in Sources */,
+				F462372973C9ECC7D842717E /* NetworkRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D247B5BF5A2F554DAEFA3C5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F0FFB785BDB6C63FD1A1EF /* WiFiMapperCore */;
+			targetProxy = 9CEF2FC52E74E3143B8D72BA /* PBXContainerItemProxy */;
+		};
+		EA8C21A376216B38366AE8B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F0FFB785BDB6C63FD1A1EF /* WiFiMapperCore */;
+			targetProxy = 21E846EE9D9994F5B25C7D0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AABBCCDD00DD00DD00DD00DD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AABBCC110011001100110011 /* de */,
+				AABBCC220022002200220022 /* en */,
+				AABBCC330033003300330033 /* es */,
+				AABBCC440044004400440044 /* fr */,
+				AABBCC550055005500550055 /* it */,
+				AABBCC660066006600660066 /* ja */,
+				AABBCC770077007700770077 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15F10F1587DDACB714F1B50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapperTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		380632F8B83053A42ADEC840 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/WiFiMapper.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK5PTZ6599;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapper;
+				PRODUCT_NAME = WiFiMapper;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		629E5BDBBB15F8A6173D6191 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapperCore;
+				PRODUCT_NAME = WiFiMapperCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		7D6862AEE40908B1FF348AA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapperTests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A2F3DBEDFB0BCBBE02FD8959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AD9A263D81794200C7423F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/WiFiMapper.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VK5PTZ6599;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapper;
+				PRODUCT_NAME = WiFiMapper;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C538E2C83629FD96D84C680A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D43479B8ECD4EFF3684D2720 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavelmasyukov.WiFiMapperCore;
+				PRODUCT_NAME = WiFiMapperCore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1780ED4DD15B02AA001D6C20 /* Build configuration list for PBXNativeTarget "WiFiMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380632F8B83053A42ADEC840 /* Debug */,
+				AD9A263D81794200C7423F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6A68B8973135437578E9CF63 /* Build configuration list for PBXProject "WiFiMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C538E2C83629FD96D84C680A /* Debug */,
+				A2F3DBEDFB0BCBBE02FD8959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D6D0C312EF97C6F3566AF990 /* Build configuration list for PBXNativeTarget "WiFiMapperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15F10F1587DDACB714F1B50D /* Debug */,
+				7D6862AEE40908B1FF348AA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F8FAF279F59BCF02E2B1F9A2 /* Build configuration list for PBXNativeTarget "WiFiMapperCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D43479B8ECD4EFF3684D2720 /* Debug */,
+				629E5BDBBB15F8A6173D6191 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3577ECB962C91DEFBAE21D37 /* Project object */;
+}

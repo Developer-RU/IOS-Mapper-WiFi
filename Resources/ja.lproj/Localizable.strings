@@ -1,0 +1,246 @@
+"tab.dashboard" = "ダッシュボード";
+"tab.map" = "マップ";
+"tab.database" = "データベース";
+"tab.analytics" = "分析";
+"tab.history" = "履歴";
+"tab.settings" = "設定";
+
+"demo.mode.active" = "デモモード有効";
+
+"settings.appearance.title" = "外観";
+"settings.appearance.picker" = "テーマ";
+"settings.appearance.system" = "システム";
+"settings.appearance.light" = "ライト";
+"settings.appearance.dark" = "ダーク";
+
+"settings.language.title" = "言語";
+"settings.language.picker" = "言語";
+"settings.language.system" = "システム";
+"settings.language.english" = "English";
+"settings.language.russian" = "Русский";
+"settings.language.spanish" = "Español";
+"settings.language.german" = "Deutsch";
+"settings.language.french" = "Français";
+"settings.language.italian" = "Italiano";
+"settings.language.japanese" = "日本語";
+
+"settings.textSize.title" = "文字サイズ";
+"settings.textSize.picker" = "文字サイズ";
+"settings.textSize.system" = "システム";
+"settings.textSize.xSmall" = "極小";
+"settings.textSize.small" = "小";
+"settings.textSize.medium" = "中";
+"settings.textSize.large" = "大";
+"settings.textSize.xLarge" = "特大";
+"settings.textSize.xxLarge" = "XX 特大";
+"settings.textSize.xxxLarge" = "XXX 特大";
+
+"settings.scanInterval.title" = "スキャン間隔";
+"settings.scanInterval.mode" = "モード";
+
+"settings.performance.title" = "パフォーマンス";
+"settings.performance.aggressive" = "高頻度スキャン";
+"settings.performance.batterySaver" = "省電力";
+"settings.performance.highAccuracyGps" = "高精度GPS";
+"settings.performance.backgroundScanning" = "バックグラウンドスキャン";
+"settings.performance.autoSave" = "自動保存";
+"settings.performance.demoMode" = "デモモード";
+
+"dashboard.header.eyebrow" = "フィールドコンソール";
+"dashboard.header.title" = "ノイズのない街の探索。";
+"dashboard.header.subtitle" = "ルート追跡、ローカル保存、リアルタイム信号分析を備えたオフラインWi-Fiマッピング。";
+"dashboard.demo.subtitle" = "合成ローカル観測データがダッシュボード、マップ、分析ビューに使用されています。";
+"dashboard.kpi.networks.title" = "ネットワーク";
+"dashboard.kpi.networks.subtitle" = "ユニーク記録";
+"dashboard.kpi.samples.title" = "サンプル";
+"dashboard.kpi.samples.subtitle" = "保存済み観測";
+"dashboard.kpi.location.title" = "位置情報";
+"dashboard.kpi.currentSsid.title" = "現在のSSID";
+"dashboard.kpi.currentSsid.subtitle %@" = "最終スキャン %@";
+"dashboard.area.title" = "エリア比較";
+"dashboard.area.radius %lld %@" = "半径 %lld m（%@ 周辺）";
+"dashboard.area.metric.current" = "現在";
+"dashboard.area.metric.new" = "新規";
+"dashboard.area.metric.gone" = "消滅";
+"dashboard.area.metric.stable" = "安定";
+"dashboard.area.strongest %@" = "最強近傍: %@";
+"dashboard.area.list.new" = "新規検出";
+"dashboard.area.list.disappeared" = "消滅";
+"dashboard.area.list.empty" = "エントリなし";
+"dashboard.platformNote.title" = "プラットフォーム注意事項";
+"dashboard.hero.badge" = "オフライン測量モード";
+"dashboard.hero.title" = "都市規模のオフラインWi-Fiマッピング";
+"dashboard.hero.subtitle" = "移動を追跡し、ローカル観測を記録し、全測量データをデバイスに保持。";
+"dashboard.hero.stopScan" = "スキャン停止";
+"dashboard.hero.startScan" = "スキャン開始";
+"dashboard.hero.permissions" = "権限設定";
+"dashboard.hero.activeSession %@" = "アクティブセッション: %@";
+"analytics.header.eyebrow" = "シグナルインテリジェンス";
+"analytics.header.title" = "電波の景観を見る。";
+"analytics.header.subtitle" = "ローカル観測データから生成した分布、混雑、トレンド分析。";
+"analytics.kpi.networks.title" = "ネットワーク";
+"analytics.kpi.networks.subtitle" = "ローカル保存済み";
+"analytics.kpi.observations.title" = "観測数";
+"analytics.kpi.observations.subtitle" = "履歴サンプル";
+"analytics.kpi.open.title" = "オープン";
+"analytics.kpi.open.subtitle" = "潜在リスク";
+"analytics.kpi.avgRssi.title" = "平均RSSI";
+"analytics.kpi.avgScans.title" = "平均スキャン数";
+"analytics.kpi.avgScans.subtitle" = "対象範囲内のネットワークあたり";
+"analytics.kpi.window.title" = "ウィンドウ";
+"analytics.kpi.window.subtitle" = "現在の分析範囲";
+"analytics.filters.title" = "分析フィルタ";
+"analytics.filters.date" = "日付";
+"analytics.filters.sort" = "並び替え";
+"analytics.filters.openOnly" = "オープンネットワークのみ";
+"analytics.filters.minScans %lld" = "最低スキャン数: %lld";
+"analytics.bandDistribution.title" = "バンド分布";
+"analytics.securityMix.title" = "セキュリティ構成";
+"analytics.channelCongestion.title" = "チャンネル混雑";
+"analytics.observationTrend.title" = "観測トレンド";
+"analytics.latestNetworks.title" = "最新ネットワーク";
+"database.header.eyebrow" = "アーカイブ";
+"database.header.title" = "ローカルネットワーク保管庫。";
+"database.header.subtitle" = "高速フィルタ、即時検索、クラウド不使用のエクスポート。";
+"database.filters.title" = "フィルタ";
+"database.filters.search" = "SSIDまたはBSSID";
+"database.filters.openOnly" = "オープンネットワークのみ";
+"database.filters.sort" = "並び替え";
+"database.filters.date" = "日付";
+"database.filters.minScans %lld" = "最低スキャン数: %lld";
+"database.filters.channel" = "チャンネル";
+"database.filters.channel.any" = "すべて";
+"database.filters.reset" = "フィルタをリセット";
+"database.savedNetworks.title" = "保存済みネットワーク";
+"database.savedNetworks.empty" = "記録がありません。スキャンを実行するかデモモードを有効にしてください。";
+"database.export.title" = "エクスポート";
+"database.export.share" = "最後のエクスポートを共有";
+"history.header.eyebrow" = "デルタスキャン";
+"history.header.title" = "ここで何が変わりましたか？";
+"history.header.subtitle" = "現在のゾーンを保存済み履歴と比較し、出現または消滅したネットワークを発見します。";
+"history.hero.badge" = "履歴デルタ";
+"history.hero.title" = "再訪分析";
+"history.hero.subtitle" = "現在のエリアをローカル観測と比較し、新規・安定・消滅ネットワークを特定します。";
+"history.hero.center %@" = "中心: %@";
+"history.hero.radius" = "半径";
+"history.hero.window" = "ウィンドウ";
+"history.kpi.new.title" = "新規";
+"history.kpi.new.subtitle" = "最近出現";
+"history.kpi.stable.title" = "安定";
+"history.kpi.stable.subtitle" = "両ウィンドウに存在";
+"history.kpi.missing.title" = "消滅";
+"history.kpi.missing.subtitle" = "以前は存在";
+"history.kpi.strongest.title" = "最強";
+"history.kpi.strongest.subtitle" = "エリア内最高信号";
+"history.section.new" = "新規発見";
+"history.section.stable" = "安定した存在";
+"history.section.disappeared" = "消滅";
+"history.section.empty" = "このスライスに一致する項目がありません。";
+"map.header.title" = "シグナルアトラス";
+"map.header.subtitle" = "ライブオーバーレイ、密度クラスター、ルートトレース";
+"map.demo.subtitle" = "マップオーバーレイは現在、ライブ観測ではなくデモサンプルを表示しています。";
+"map.style.picker" = "マップスタイル";
+"map.filter.title" = "フィルタ";
+"map.filter.search" = "検索";
+"map.filter.search.placeholder" = "SSIDまたはBSSID";
+"map.filter.signal" = "信号";
+"map.filter.minRssi %lld" = "最低RSSI: %lld dBm";
+"map.filter.channel" = "チャンネル";
+"map.filter.channel.any" = "すべて";
+"map.filter.bands" = "バンド";
+"map.filter.security" = "セキュリティ";
+"map.filter.openOnly" = "オープンのみ";
+"map.filter.reset" = "リセット";
+"networkDetails.title" = "ネットワーク詳細";
+"networkDetails.lastSeen %@" = "最終確認: %@";
+"networkDetails.signalHistory" = "信号履歴";
+"networkDetails.security" = "セキュリティ";
+"networkDetails.band" = "バンド";
+"networkDetails.frequency" = "周波数";
+"networkDetails.channel" = "チャンネル";
+"networkDetails.encryption" = "暗号化";
+"networkDetails.captivePortal" = "キャプティブポータル";
+"networkDetails.authHint" = "認証ヒント";
+"networkDetails.coordinates" = "座標";
+"networkDetails.scanCount" = "スキャン数";
+"networkDetails.unavailable" = "利用不可";
+"networkDetails.notDetected" = "未検出";
+"splash.title" = "WiFi Mapper";
+"splash.subtitle" = "オフラインシグナルインテリジェンス";
+"settings.header.eyebrow" = "コントロールセンター";
+"settings.header.title" = "スキャナーを調整する。";
+"settings.header.subtitle" = "測量ワークフローに合わせて精度、バッテリー、バックグラウンド動作のバランスを調整します。";
+"settings.quality.title" = "品質ゲート";
+"settings.quality.repeatedChecks %lld" = "繰り返しチェック: %lld";
+"settings.quality.retryCount %lld" = "リトライ回数: %lld";
+"settings.quality.signalThreshold %lld" = "信号しきい値: %lld dBm";
+"settings.quality.ignoreWeak" = "弱いネットワークを無視";
+"settings.readiness.title" = "iPhoneの準備状態";
+"settings.readiness.buildTarget" = "ビルドターゲット";
+"settings.readiness.buildTarget.value" = "実際のWi-Fi関連データには物理iPhoneが必要";
+"settings.readiness.locationMode" = "位置情報モード";
+"settings.readiness.locationMode.value" = "常時 + バックグラウンド位置情報";
+"settings.readiness.localNetwork" = "ローカルネットワーク";
+"settings.readiness.localNetwork.value" = "診断には権限プロンプトが必要";
+"settings.readiness.note" = "公開iOS APIはすべての近くのWi-Fiネットワークをパッシブスキャンできません。アプリは現在接続中のネットワークとGPS/履歴をローカルに記録します。";
+"settings.demoData.title" = "デモデータ";
+"settings.demoData.generate" = "デモデータセットを生成";
+
+// WiFi Band
+"wifi.band.24" = "2.4 GHz";
+"wifi.band.5" = "5 GHz";
+"wifi.band.6" = "6 GHz";
+"wifi.band.unknown" = "不明";
+
+// WiFi Security
+"wifi.security.open" = "オープン";
+"wifi.security.wpa" = "WPA";
+"wifi.security.wpa2" = "WPA2";
+"wifi.security.wpa3" = "WPA3";
+"wifi.security.secure" = "セキュア";
+"wifi.security.unknown" = "不明";
+
+// Scanner Mode
+"scanner.mode.continuous" = "連続";
+"scanner.mode.every5s" = "5秒ごと";
+"scanner.mode.every10s" = "10秒ごと";
+"scanner.mode.every30s" = "30秒ごと";
+"scanner.mode.everyMinute" = "1分ごと";
+
+// Map Layer
+"map.layer.points" = "ポイント";
+"map.layer.heatmap" = "ヒートマップ";
+"map.layer.congestion" = "混雑";
+"map.layer.route" = "ルート";
+
+// Map Style
+"map.style.standard" = "ストリート";
+"map.style.hybrid" = "ハイブリッド";
+"map.style.imagery" = "衛星";
+
+// Sort Order
+"sort.newest" = "最新";
+"sort.strongest" = "最強";
+"sort.mostSeen" = "最多";
+"sort.ssid" = "SSID";
+
+// Time Scope
+"timeScope.all" = "全期間";
+"timeScope.24h" = "24時間";
+"timeScope.7d" = "7日間";
+"timeScope.30d" = "30日間";
+
+// Comparison Window
+"comparison.1h" = "1時間";
+"comparison.24h" = "24時間";
+"comparison.7d" = "7日";
+"comparison.all" = "全て";
+
+// Location Status
+"location.status.notAuthorized" = "未許可";
+"location.status.always" = "常に許可";
+"location.status.whenInUse" = "使用中のみ";
+"location.status.denied" = "拒否";
+"location.status.restricted" = "制限";
+"location.status.pending" = "保留中";
+"location.status.unknown" = "不明";
