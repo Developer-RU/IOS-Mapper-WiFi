@@ -93,6 +93,18 @@ Additional docs:
 - No mandatory cloud dependency.
 - Export is explicit and user-triggered.
 
+## Screenshots
+
+<p align="center">
+   <img src="Screenshots/IMG_4854.PNG" alt="Dashboard" width="32%" />
+   <img src="Screenshots/IMG_4855.PNG" alt="Map" width="32%" />
+   <img src="Screenshots/IMG_4856.PNG" alt="External Scanner" width="32%" />
+</p>
+<p align="center">
+   <img src="Screenshots/IMG_4857.PNG" alt="Analytics" width="32%" />
+   <img src="Screenshots/IMG_4858.PNG" alt="Settings" width="32%" />
+</p>
+
 ## Free Use Notice
 
 This project is intended to be freely usable. If you distribute or publish it, include a license file and attribution policy appropriate for your organization.
