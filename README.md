@@ -96,13 +96,14 @@ Additional docs:
 ## Screenshots
 
 <p align="center">
-   <img src="Screenshots/IMG_4854.PNG" alt="Dashboard" width="32%" />
-   <img src="Screenshots/IMG_4855.PNG" alt="Map" width="32%" />
-   <img src="Screenshots/IMG_4856.PNG" alt="External Scanner" width="32%" />
+   <img src="Screenshots/01-dashboard.png" alt="Dashboard" width="32%" />
+   <img src="Screenshots/02-map.png" alt="Map" width="32%" />
+   <img src="Screenshots/03-external-scanner.png" alt="External Scanner" width="32%" />
 </p>
 <p align="center">
-   <img src="Screenshots/IMG_4857.PNG" alt="Analytics" width="32%" />
-   <img src="Screenshots/IMG_4858.PNG" alt="Settings" width="32%" />
+   <img src="Screenshots/04-analytics.png" alt="Analytics" width="32%" />
+   <img src="Screenshots/05-settings.png" alt="Settings" width="32%" />
+   <img src="Screenshots/06-settings-extra.png" alt="Settings Extra" width="32%" />
 </p>
 
 ## Free Use Notice
