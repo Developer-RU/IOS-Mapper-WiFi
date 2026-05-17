@@ -6,7 +6,7 @@ This document explains how IOS-Mapper WiFi integrates with the companion ESP32 s
 
 ## Companion Firmware
 
-- [ESP32-Mapper WiFi](../../WIFI-MAPPER)
+- [ESP32-Mapper WiFi](https://github.com/Developer-RU/ESP32-Mapper-WiFi)
 
 ## Expected Scanner Defaults
 

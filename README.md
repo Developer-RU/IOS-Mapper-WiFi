@@ -7,9 +7,7 @@ This project is designed to be free to use for research, education, testing, and
 ## Related Project
 
 This mobile app depends on the companion firmware project:
-- [ESP32-Mapper WiFi](../WIFI-MAPPER)
-
-If your repositories are published separately on GitHub, replace this relative link with the public firmware repository URL.
+- [ESP32-Mapper WiFi](https://github.com/Developer-RU/ESP32-Mapper-WiFi)
 
 ## What This App Does
 

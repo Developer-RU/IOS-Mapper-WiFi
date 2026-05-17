@@ -64,4 +64,4 @@ All user-facing text should be stored in `Resources/*/Localizable.strings` and a
 
 ## Related Project
 
-Companion firmware: [ESP32-Mapper WiFi](../../WIFI-MAPPER)
+Companion firmware: [ESP32-Mapper WiFi](https://github.com/Developer-RU/ESP32-Mapper-WiFi)
