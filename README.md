@@ -1,5 +1,9 @@
 # IOS-Mapper WiFi
 
+[![CI](https://img.shields.io/badge/CI-not%20configured-lightgrey)](https://github.com/Developer-RU/IOS-Mapper-WiFi/actions)
+[![Platform](https://img.shields.io/badge/platform-iOS%2018%2B-blue)](https://developer.apple.com/ios/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 IOS-Mapper WiFi is an iPhone application for Wi-Fi survey workflows with offline storage, map visualization, analytics, and optional integration with an ESP32 external scanner.
 
 This project is designed to be free to use for research, education, testing, and production-like field diagnostics.
@@ -56,6 +60,7 @@ Important: Wi-Fi AP connection is manual in iOS system settings. The app does no
 Additional docs:
 - [Architecture](docs/ARCHITECTURE.md)
 - [External Scanner Guide](docs/EXTERNAL_SCANNER.md)
+- [Release Notes v1.0.0](docs/RELEASE_NOTES_v1.0.0.md)
 
 ## Build and Run
 
