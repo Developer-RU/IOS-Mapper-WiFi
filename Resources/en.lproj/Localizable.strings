@@ -68,15 +68,15 @@
 "dashboard.area.list.disappeared" = "Disappeared";
 "dashboard.area.list.empty" = "No entries";
 "dashboard.platformNote.title" = "Platform note";
-"dashboard.platformNote.body" = "A full Wi-Fi scanner is not possible on stock iPhone. This app only logs the currently associated network.";
+"dashboard.platformNote.body" = "Stock iPhone APIs can log only the associated network. For full radio scans, switch to External Scanner mode.";
 "dashboard.permissions.title" = "Permissions";
-"dashboard.permissions.body" = "Grant Location and Local Network permissions. This app only logs the currently associated network, not all nearby Wi-Fi networks.";
+"dashboard.permissions.body" = "Grant Location and Local Network permissions. External Scanner mode uses these permissions to connect to scanner access points and sync scan results.";
 "dashboard.permissions.location" = "Location";
 "dashboard.permissions.localNetwork" = "Local network";
 "dashboard.permissions.openSettings" = "Open Settings";
 "scan.simulatorUnsupported" = "Use a physical iPhone. The simulator cannot read Wi-Fi networks.";
 "scan.waitingForLocation" = "Waiting for a location fix before scanning.";
-"scan.connectToWifi" = "Connect to a Wi-Fi network. This app only logs the currently associated network.";
+"scan.connectToWifi" = "Connect to Wi-Fi or enable External Scanner mode in Settings.";
 "dashboard.hero.badge" = "Offline survey mode";
 "dashboard.hero.title" = "City-grade offline Wi-Fi mapping";
 "dashboard.hero.subtitle" = "Track movement, capture local observations, and keep the entire survey database on device.";
@@ -185,7 +185,7 @@
 
 "settings.header.eyebrow" = "Control center";
 "settings.header.title" = "Tune the scanner.";
-"settings.header.subtitle" = "Balance precision, battery, and background behavior for your survey workflow.";
+"settings.header.subtitle" = "Configure source, precision, battery behavior, and external scanner connectivity for your survey workflow.";
 "settings.quality.title" = "Quality gates";
 "settings.quality.repeatedChecks %lld" = "Repeated checks: %lld";
 "settings.quality.retryCount %lld" = "Retry count: %lld";
@@ -198,9 +198,47 @@
 "settings.readiness.locationMode.value" = "Always + background location";
 "settings.readiness.localNetwork" = "Local network";
 "settings.readiness.localNetwork.value" = "Prompt required for diagnostics";
-"settings.readiness.note" = "A full Wi-Fi scanner is not possible on stock iPhone. The app records only the currently associated network plus GPS/history locally.";
+"settings.readiness.note" = "Use iPhone mode for associated-network logging, or External Scanner mode for full nearby network scans.";
 "settings.demoData.title" = "Demo data";
 "settings.demoData.generate" = "Generate demo dataset";
+
+"scanner.source.title" = "Scanner source";
+"scanner.source.picker" = "Source";
+"scanner.source.iphone" = "iPhone associated network";
+"scanner.source.external" = "External scanner";
+
+"external.scanner.banner.title" = "External scanner";
+"external.scanner.title" = "External scanner connection";
+"external.scanner.ssid" = "Scanner access point SSID";
+"external.scanner.password" = "Scanner access point password";
+"external.scanner.host" = "Scanner host";
+"external.scanner.manualConnectHint" = "Connect to the external scanner access point manually in iPhone Wi-Fi settings.";
+"external.scanner.info.title" = "External scanner information";
+"external.scanner.info.serial" = "Serial number";
+"external.scanner.info.firmware" = "Firmware version";
+"external.scanner.info.networkTypes" = "Scanned network types";
+"external.scanner.port %lld" = "Port: %lld";
+"external.scanner.maxResults %lld" = "Max results: %lld";
+"external.scanner.timeout %lld" = "Scan timeout: %lld sec";
+"external.scanner.connect" = "Connect and test";
+"external.scanner.timeout" = "External scanner timeout. Check AP signal and host settings.";
+"external.scanner.error.unreachable" = "Cannot reach external scanner.";
+"external.scanner.error.noResults" = "Scanner returned no networks.";
+"external.scanner.error.invalidEndpoint" = "Invalid scanner endpoint.";
+"external.scanner.error.invalidResponse" = "Scanner response format is invalid.";
+"external.scanner.error.http %lld" = "Scanner HTTP error: %lld";
+"external.scanner.state.disconnected" = "Disconnected";
+"external.scanner.state.connecting" = "Connecting";
+"external.scanner.state.connected" = "Connected";
+"external.scanner.state.scanning" = "Scanning";
+"external.scanner.state.failed" = "Error";
+"external.scanner.detail.disconnected" = "Disconnected | id: -";
+"external.scanner.detail.connecting" = "Connecting...";
+"external.scanner.detail.failed %@" = "Connection error: %@";
+"external.scanner.detail.dataExchange %@" = "%@ | data exchange";
+"external.scanner.detail.ready %@" = "%@ | ready";
+"external.scanner.detail.monitoring %@" = "%@ | monitoring";
+"external.scanner.detail.metadata %@ %@" = "id: %@ | fw: %@";
 
 // WiFi Band
 "wifi.band.24" = "2.4 GHz";
@@ -260,6 +298,13 @@
 "location.status.restricted" = "Restricted";
 "location.status.pending" = "Pending";
 "location.status.unknown" = "Unknown";
+"location.accuracy.format %d" = "± %d m";
+
+"general.waiting" = "Waiting";
+"dashboard.kpi.currentSsid.noData" = "No data";
+"dashboard.kpi.currentSsid.empty" = "No Wi-Fi sample";
+"history.location.pending" = "Location pending";
+"history.location.enableNeeded" = "Move with location enabled to compare the current area against stored history.";
 
 "permission.localNetwork.unknown" = "Unknown";
 "permission.localNetwork.granted" = "Granted";

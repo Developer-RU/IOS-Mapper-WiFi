@@ -9,11 +9,11 @@ final class DashboardViewModel: ObservableObject {
     @Published private(set) var sessionState = ScanSessionState()
     @Published private(set) var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published private(set) var localNetworkAuthorizationStatus: PermissionService.LocalNetworkStatus = .unknown
-    @Published private(set) var locationStatus = String(localized: "location.status.notAuthorized")
-    @Published private(set) var localNetworkStatus = String(localized: "permission.localNetwork.unknown")
-    @Published private(set) var accuracy = "Unknown"
-    @Published private(set) var currentSSID = "No data"
-    @Published private(set) var lastScanText = "Waiting"
+    @Published private(set) var locationStatus = AppStrings.localized("location.status.notAuthorized")
+    @Published private(set) var localNetworkStatus = AppStrings.localized("permission.localNetwork.unknown")
+    @Published private(set) var accuracy = AppStrings.localized("location.status.unknown")
+    @Published private(set) var currentSSID = AppStrings.localized("dashboard.kpi.currentSsid.noData")
+    @Published private(set) var lastScanText = AppStrings.localized("general.waiting")
     @Published private(set) var areaComparison = AreaHistoryComparison()
     @Published private(set) var isDemoMode = false
 
@@ -33,14 +33,14 @@ final class DashboardViewModel: ObservableObject {
         appModel.scannerService.$liveNetworks
             .receive(on: RunLoop.main)
             .sink { [weak self] networks in
-                self?.currentSSID = networks.first?.ssid ?? "No Wi-Fi sample"
+                self?.currentSSID = networks.first?.ssid ?? AppStrings.localized("dashboard.kpi.currentSsid.empty")
             }
             .store(in: &cancellables)
 
         appModel.scannerService.$lastScanDate
             .receive(on: RunLoop.main)
             .sink { [weak self] date in
-                self?.lastScanText = date.map { Self.relativeFormatter.localizedString(for: $0, relativeTo: Date()) } ?? "Waiting"
+                self?.lastScanText = date.map { Self.relativeFormatter.localizedString(for: $0, relativeTo: Date()) } ?? AppStrings.localized("general.waiting")
             }
             .store(in: &cancellables)
 
@@ -96,7 +96,7 @@ final class DashboardViewModel: ObservableObject {
         }
 
         guard canStartScanning else {
-            sessionState.lastErrorMessage = String(localized: "dashboard.permissions.body")
+            sessionState.lastErrorMessage = AppStrings.localized("dashboard.permissions.body")
             return
         }
 
@@ -129,43 +129,45 @@ final class DashboardViewModel: ObservableObject {
     }
 
     var permissionSummaryTitle: String {
-        String(localized: "dashboard.permissions.title")
+        AppStrings.localized("dashboard.permissions.title")
     }
 
     var permissionSummaryBody: String {
-        String(localized: "dashboard.permissions.body")
+        AppStrings.localized("dashboard.permissions.body")
     }
 
     var locationPermissionLabel: String {
-        String(localized: "dashboard.permissions.location")
+        AppStrings.localized("dashboard.permissions.location")
     }
 
     var localNetworkPermissionLabel: String {
-        String(localized: "dashboard.permissions.localNetwork")
+        AppStrings.localized("dashboard.permissions.localNetwork")
     }
 
     var canStartScanning: Bool {
+        if appModel.scannerService.settings.inputSource == .externalScanner {
+            return true
+        }
         let locationGranted = locationAuthorizationStatus == .authorizedAlways || locationAuthorizationStatus == .authorizedWhenInUse
-        let localNetworkGranted = localNetworkAuthorizationStatus == .granted
-        return locationGranted && localNetworkGranted
+        return locationGranted
     }
 
     private static func describe(_ status: CLAuthorizationStatus) -> String {
         switch status {
-        case .authorizedAlways: return String(localized: "location.status.always")
-        case .authorizedWhenInUse: return String(localized: "location.status.whenInUse")
-        case .denied: return String(localized: "location.status.denied")
-        case .restricted: return String(localized: "location.status.restricted")
-        case .notDetermined: return String(localized: "location.status.pending")
-        @unknown default: return String(localized: "location.status.unknown")
+        case .authorizedAlways: return AppStrings.localized("location.status.always")
+        case .authorizedWhenInUse: return AppStrings.localized("location.status.whenInUse")
+        case .denied: return AppStrings.localized("location.status.denied")
+        case .restricted: return AppStrings.localized("location.status.restricted")
+        case .notDetermined: return AppStrings.localized("location.status.pending")
+        @unknown default: return AppStrings.localized("location.status.unknown")
         }
     }
 
     private static func describe(_ status: PermissionService.LocalNetworkStatus) -> String {
         switch status {
-        case .unknown: return String(localized: "permission.localNetwork.unknown")
-        case .granted: return String(localized: "permission.localNetwork.granted")
-        case .denied: return String(localized: "permission.localNetwork.denied")
+        case .unknown: return AppStrings.localized("permission.localNetwork.unknown")
+        case .granted: return AppStrings.localized("permission.localNetwork.granted")
+        case .denied: return AppStrings.localized("permission.localNetwork.denied")
         }
     }
 

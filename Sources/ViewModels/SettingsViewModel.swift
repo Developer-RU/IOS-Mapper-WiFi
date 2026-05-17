@@ -8,6 +8,7 @@ final class SettingsViewModel: ObservableObject {
     @Published var appearance: AppAppearance = .system
     @Published var language: AppLanguage = .system
     @Published var textSize: AppTextSize = .system
+    @Published private(set) var externalScannerStatus = ExternalScannerService.StatusSnapshot()
 
     private let appModel: AppModel
     private var cancellables: Set<AnyCancellable> = []
@@ -38,6 +39,11 @@ final class SettingsViewModel: ObservableObject {
             .receive(on: RunLoop.main)
             .sink { [weak self] in self?.textSize = $0 }
             .store(in: &cancellables)
+
+        appModel.externalScannerService.$status
+            .receive(on: RunLoop.main)
+            .sink { [weak self] in self?.externalScannerStatus = $0 }
+            .store(in: &cancellables)
     }
 
     func update(_ transform: @escaping (inout ScannerSettings) -> Void) {
@@ -60,5 +66,11 @@ final class SettingsViewModel: ObservableObject {
 
     func setTextSize(_ textSize: AppTextSize) {
         appModel.textSize = textSize
+    }
+
+    func testExternalConnection() {
+        Task {
+            await appModel.scannerService.testExternalScannerConnection()
+        }
     }
 }

@@ -48,8 +48,10 @@ struct MapScreen: View {
             .background(Color.black.opacity(0.28), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
 
             if viewModel.isDemoMode {
-                DemoModeBanner(subtitle: String(localized: "map.demo.subtitle"))
+                DemoModeBanner(subtitle: AppStrings.localized("map.demo.subtitle"))
             }
+
+            ExternalScannerStatusBanner()
 
             HStack(spacing: 12) {
                 Picker("map.style.picker", selection: $viewModel.selectedStyle) {

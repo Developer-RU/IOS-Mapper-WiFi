@@ -1,4 +1,4 @@
-name: WiFiMapper
+name: IOS-Mapper WiFi
 options:
   bundleIdPrefix: com.pavelmasyukov
   deploymentTarget:
@@ -27,12 +27,16 @@ targets:
           - Models/**
           - Persistence/**
           - Services/DemoDataFactory.swift
-    resources:
       - path: Resources
+        excludes:
+          - Info.plist
+          - WiFiMapper.entitlements
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.WiFiMapper
-        PRODUCT_NAME: WiFiMapper
+        PRODUCT_NAME: "IOS-Mapper WiFi"
+        DEVELOPMENT_TEAM: VK5PTZ6599
         SWIFT_VERSION: 5.0
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: 1.0.0
@@ -59,5 +63,6 @@ targets:
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.pavelmasyukov.WiFiMapperTests
+        DEVELOPMENT_TEAM: VK5PTZ6599
         SWIFT_VERSION: 5.0
         GENERATE_INFOPLIST_FILE: YES

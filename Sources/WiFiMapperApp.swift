@@ -28,6 +28,9 @@ struct WiFiMapperApp: App {
         }
         .preferredColorScheme(appModel.appearance.colorScheme)
         .environment(\.locale, appModel.language.locale)
+        .environmentObject(appModel)
+        .environmentObject(appModel.scannerService)
+        .environmentObject(appModel.externalScannerService)
 
         if let dynamicTypeSize = appModel.textSize.dynamicTypeSize {
             root.dynamicTypeSize(dynamicTypeSize)

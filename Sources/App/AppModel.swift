@@ -13,9 +13,9 @@ enum AppAppearance: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .system: return String(localized: "settings.appearance.system")
-        case .light: return String(localized: "settings.appearance.light")
-        case .dark: return String(localized: "settings.appearance.dark")
+        case .system: return AppStrings.localized("settings.appearance.system")
+        case .light: return AppStrings.localized("settings.appearance.light")
+        case .dark: return AppStrings.localized("settings.appearance.dark")
         }
     }
 
@@ -42,14 +42,14 @@ enum AppLanguage: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .system: return String(localized: "settings.language.system")
-        case .english: return String(localized: "settings.language.english")
-        case .russian: return String(localized: "settings.language.russian")
-        case .spanish: return String(localized: "settings.language.spanish")
-        case .german: return String(localized: "settings.language.german")
-        case .french: return String(localized: "settings.language.french")
-        case .italian: return String(localized: "settings.language.italian")
-        case .japanese: return String(localized: "settings.language.japanese")
+        case .system: return AppStrings.localized("settings.language.system")
+        case .english: return AppStrings.localized("settings.language.english")
+        case .russian: return AppStrings.localized("settings.language.russian")
+        case .spanish: return AppStrings.localized("settings.language.spanish")
+        case .german: return AppStrings.localized("settings.language.german")
+        case .french: return AppStrings.localized("settings.language.french")
+        case .italian: return AppStrings.localized("settings.language.italian")
+        case .japanese: return AppStrings.localized("settings.language.japanese")
         }
     }
 
@@ -81,14 +81,14 @@ enum AppTextSize: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .system: return String(localized: "settings.textSize.system")
-        case .xSmall: return String(localized: "settings.textSize.xSmall")
-        case .small: return String(localized: "settings.textSize.small")
-        case .medium: return String(localized: "settings.textSize.medium")
-        case .large: return String(localized: "settings.textSize.large")
-        case .xLarge: return String(localized: "settings.textSize.xLarge")
-        case .xxLarge: return String(localized: "settings.textSize.xxLarge")
-        case .xxxLarge: return String(localized: "settings.textSize.xxxLarge")
+        case .system: return AppStrings.localized("settings.textSize.system")
+        case .xSmall: return AppStrings.localized("settings.textSize.xSmall")
+        case .small: return AppStrings.localized("settings.textSize.small")
+        case .medium: return AppStrings.localized("settings.textSize.medium")
+        case .large: return AppStrings.localized("settings.textSize.large")
+        case .xLarge: return AppStrings.localized("settings.textSize.xLarge")
+        case .xxLarge: return AppStrings.localized("settings.textSize.xxLarge")
+        case .xxxLarge: return AppStrings.localized("settings.textSize.xxxLarge")
         }
     }
 
@@ -112,6 +112,7 @@ final class AppModel: ObservableObject {
     let repository: NetworkRepository
     let locationService: LocationService
     let permissionService: PermissionService
+    let externalScannerService: ExternalScannerService
     let scannerService: WiFiScannerService
     let exportService: ExportService
     @Published var appearance: AppAppearance {
@@ -139,12 +140,18 @@ final class AppModel: ObservableObject {
         let repository = NetworkRepository(persistence: persistence)
         let locationService = LocationService()
         let permissionService = PermissionService()
-        let scannerService = WiFiScannerService(repository: repository, locationService: locationService)
+        let externalScannerService = ExternalScannerService()
+        let scannerService = WiFiScannerService(
+            repository: repository,
+            locationService: locationService,
+            externalScannerService: externalScannerService
+        )
         let exportService = ExportService(repository: repository, persistence: persistence)
 
         self.repository = repository
         self.locationService = locationService
         self.permissionService = permissionService
+        self.externalScannerService = externalScannerService
         self.scannerService = scannerService
         self.exportService = exportService
         let savedAppearance = UserDefaults.standard.string(forKey: Self.appearanceDefaultsKey)

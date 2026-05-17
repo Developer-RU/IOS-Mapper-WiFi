@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>WiFi Mapper</string>
+	<string>IOS-Mapper WiFi</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -23,11 +23,16 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>WiFi Mapper uses your location to map Wi-Fi observations while you move.</string>
+	<string>IOS-Mapper WiFi uses your location to map Wi-Fi observations while you move.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>WiFi Mapper uses your location to place Wi-Fi observations on the map.</string>
+	<string>IOS-Mapper WiFi uses your location to place Wi-Fi observations on the map.</string>
 	<key>NSLocalNetworkUsageDescription</key>
-	<string>WiFi Mapper checks local network availability to enrich offline diagnostics.</string>
+	<string>IOS-Mapper WiFi checks local network availability to enrich offline diagnostics.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoadsInLocalNetworks</key>
+		<true/>
+	</dict>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_wifimap._tcp</string>

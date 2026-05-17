@@ -17,6 +17,8 @@ struct AnalyticsView: View {
                         subtitle: "analytics.header.subtitle"
                     )
 
+                    ExternalScannerStatusBanner()
+
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
                         StatTile(title: "analytics.kpi.networks.title", value: "\(viewModel.summary.totalNetworks)", subtitle: "analytics.kpi.networks.subtitle", tint: .blue)
                         StatTile(title: "analytics.kpi.observations.title", value: "\(viewModel.summary.totalObservations)", subtitle: "analytics.kpi.observations.subtitle", tint: .green)

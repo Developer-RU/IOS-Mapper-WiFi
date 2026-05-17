@@ -6,10 +6,10 @@ import WiFiMapperCore
 extension WiFiBand {
     var localizedTitle: String {
         switch self {
-        case .band24: return String(localized: "wifi.band.24")
-        case .band5: return String(localized: "wifi.band.5")
-        case .band6: return String(localized: "wifi.band.6")
-        case .unknown: return String(localized: "wifi.band.unknown")
+        case .band24: return AppStrings.localized("wifi.band.24")
+        case .band5: return AppStrings.localized("wifi.band.5")
+        case .band6: return AppStrings.localized("wifi.band.6")
+        case .unknown: return AppStrings.localized("wifi.band.unknown")
         }
     }
 }
@@ -17,12 +17,12 @@ extension WiFiBand {
 extension WiFiSecurity {
     var localizedTitle: String {
         switch self {
-        case .open: return String(localized: "wifi.security.open")
-        case .wpa: return String(localized: "wifi.security.wpa")
-        case .wpa2: return String(localized: "wifi.security.wpa2")
-        case .wpa3: return String(localized: "wifi.security.wpa3")
-        case .secure: return String(localized: "wifi.security.secure")
-        case .unknown: return String(localized: "wifi.security.unknown")
+        case .open: return AppStrings.localized("wifi.security.open")
+        case .wpa: return AppStrings.localized("wifi.security.wpa")
+        case .wpa2: return AppStrings.localized("wifi.security.wpa2")
+        case .wpa3: return AppStrings.localized("wifi.security.wpa3")
+        case .secure: return AppStrings.localized("wifi.security.secure")
+        case .unknown: return AppStrings.localized("wifi.security.unknown")
         }
     }
 }
@@ -30,11 +30,20 @@ extension WiFiSecurity {
 extension ScannerMode {
     var localizedTitle: String {
         switch self {
-        case .continuous: return String(localized: "scanner.mode.continuous")
-        case .every5Seconds: return String(localized: "scanner.mode.every5s")
-        case .every10Seconds: return String(localized: "scanner.mode.every10s")
-        case .every30Seconds: return String(localized: "scanner.mode.every30s")
-        case .everyMinute: return String(localized: "scanner.mode.everyMinute")
+        case .continuous: return AppStrings.localized("scanner.mode.continuous")
+        case .every5Seconds: return AppStrings.localized("scanner.mode.every5s")
+        case .every10Seconds: return AppStrings.localized("scanner.mode.every10s")
+        case .every30Seconds: return AppStrings.localized("scanner.mode.every30s")
+        case .everyMinute: return AppStrings.localized("scanner.mode.everyMinute")
+        }
+    }
+}
+
+extension ScannerInputSource {
+    var localizedTitle: String {
+        switch self {
+        case .iphoneAssociated: return AppStrings.localized("scanner.source.iphone")
+        case .externalScanner: return AppStrings.localized("scanner.source.external")
         }
     }
 }
@@ -42,10 +51,10 @@ extension ScannerMode {
 extension MapLayer {
     var localizedTitle: String {
         switch self {
-        case .points: return String(localized: "map.layer.points")
-        case .heatmap: return String(localized: "map.layer.heatmap")
-        case .congestion: return String(localized: "map.layer.congestion")
-        case .route: return String(localized: "map.layer.route")
+        case .points: return AppStrings.localized("map.layer.points")
+        case .heatmap: return AppStrings.localized("map.layer.heatmap")
+        case .congestion: return AppStrings.localized("map.layer.congestion")
+        case .route: return AppStrings.localized("map.layer.route")
         }
     }
 }
@@ -53,9 +62,9 @@ extension MapLayer {
 extension MapPresentationStyle {
     var localizedTitle: String {
         switch self {
-        case .standard: return String(localized: "map.style.standard")
-        case .hybrid: return String(localized: "map.style.hybrid")
-        case .imagery: return String(localized: "map.style.imagery")
+        case .standard: return AppStrings.localized("map.style.standard")
+        case .hybrid: return AppStrings.localized("map.style.hybrid")
+        case .imagery: return AppStrings.localized("map.style.imagery")
         }
     }
 }
@@ -63,10 +72,10 @@ extension MapPresentationStyle {
 extension NetworkSortOrder {
     var localizedTitle: String {
         switch self {
-        case .newest: return String(localized: "sort.newest")
-        case .strongest: return String(localized: "sort.strongest")
-        case .mostSeen: return String(localized: "sort.mostSeen")
-        case .ssid: return String(localized: "sort.ssid")
+        case .newest: return AppStrings.localized("sort.newest")
+        case .strongest: return AppStrings.localized("sort.strongest")
+        case .mostSeen: return AppStrings.localized("sort.mostSeen")
+        case .ssid: return AppStrings.localized("sort.ssid")
         }
     }
 }
@@ -74,10 +83,10 @@ extension NetworkSortOrder {
 extension HistoryTimeScope {
     var localizedTitle: String {
         switch self {
-        case .all: return String(localized: "timeScope.all")
-        case .last24Hours: return String(localized: "timeScope.24h")
-        case .last7Days: return String(localized: "timeScope.7d")
-        case .last30Days: return String(localized: "timeScope.30d")
+        case .all: return AppStrings.localized("timeScope.all")
+        case .last24Hours: return AppStrings.localized("timeScope.24h")
+        case .last7Days: return AppStrings.localized("timeScope.7d")
+        case .last30Days: return AppStrings.localized("timeScope.30d")
         }
     }
 }
@@ -85,10 +94,10 @@ extension HistoryTimeScope {
 extension ComparisonWindow {
     var localizedTitle: String {
         switch self {
-        case .lastHour: return String(localized: "comparison.1h")
-        case .last24Hours: return String(localized: "comparison.24h")
-        case .last7Days: return String(localized: "comparison.7d")
-        case .all: return String(localized: "comparison.all")
+        case .lastHour: return AppStrings.localized("comparison.1h")
+        case .last24Hours: return AppStrings.localized("comparison.24h")
+        case .last7Days: return AppStrings.localized("comparison.7d")
+        case .all: return AppStrings.localized("comparison.all")
         }
     }
 }
@@ -121,12 +130,12 @@ enum AppTab: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .dashboard: return String(localized: "tab.dashboard")
-        case .map: return String(localized: "tab.map")
-        case .database: return String(localized: "tab.database")
-        case .analytics: return String(localized: "tab.analytics")
-        case .history: return String(localized: "tab.history")
-        case .settings: return String(localized: "tab.settings")
+        case .dashboard: return AppStrings.localized("tab.dashboard")
+        case .map: return AppStrings.localized("tab.map")
+        case .database: return AppStrings.localized("tab.database")
+        case .analytics: return AppStrings.localized("tab.analytics")
+        case .history: return AppStrings.localized("tab.history")
+        case .settings: return AppStrings.localized("tab.settings")
         }
     }
 
@@ -362,6 +371,110 @@ struct DemoModeBanner: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(colorScheme == .dark ? Color.white.opacity(0.18) : Color.white.opacity(0.5), lineWidth: 1)
         )
+    }
+}
+
+struct ExternalScannerStatusBanner: View {
+    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject private var scannerService: WiFiScannerService
+    @EnvironmentObject private var externalScannerService: ExternalScannerService
+
+    private var isExternalMode: Bool {
+        scannerService.settings.inputSource == .externalScanner
+    }
+
+    private var stateText: String {
+        switch externalScannerService.status.state {
+        case .disconnected: return AppStrings.localized("external.scanner.state.disconnected")
+        case .connecting: return AppStrings.localized("external.scanner.state.connecting")
+        case .connected: return AppStrings.localized("external.scanner.state.connected")
+        case .scanning: return AppStrings.localized("external.scanner.state.scanning")
+        case .failed: return AppStrings.localized("external.scanner.state.failed")
+        }
+    }
+
+    private var statusDetailText: String {
+        let status = externalScannerService.status
+
+        switch status.state {
+        case .disconnected:
+            return AppStrings.localized("external.scanner.detail.disconnected")
+        case .connecting:
+            return AppStrings.localized("external.scanner.detail.connecting")
+        case .failed:
+            if let lastError = status.lastErrorMessage, !lastError.isEmpty {
+                return AppStrings.localized("external.scanner.detail.failed %@", lastError)
+            }
+            return stateText
+        case .scanning:
+            return AppStrings.localized("external.scanner.detail.dataExchange %@", stateText)
+        case .connected:
+            if status.inProgress || status.lastCommand == "start" {
+                return AppStrings.localized("external.scanner.detail.dataExchange %@", AppStrings.localized("external.scanner.state.scanning"))
+            }
+            if status.lastCommand == "stop" {
+                return AppStrings.localized("external.scanner.detail.ready %@", stateText)
+            }
+            return AppStrings.localized("external.scanner.detail.monitoring %@", stateText)
+        }
+    }
+
+    private var metadataText: String {
+        let status = externalScannerService.status
+        return AppStrings.localized("external.scanner.detail.metadata %@ %@", status.deviceID, status.firmware)
+    }
+
+    private var tint: Color {
+        switch externalScannerService.status.state {
+        case .connected, .scanning:
+            return .green
+        case .connecting:
+            return .orange
+        case .failed:
+            return .red
+        case .disconnected:
+            return .secondary
+        }
+    }
+
+    var body: some View {
+        if isExternalMode {
+            HStack(spacing: 12) {
+                Image(systemName: "antenna.radiowaves.left.and.right")
+                    .font(.title3)
+                    .foregroundStyle(tint)
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text("external.scanner.banner.title")
+                        .font(.subheadline.weight(.semibold))
+                    Text(statusDetailText)
+                        .font(.footnote)
+                        .foregroundStyle(colorScheme == .dark ? Color.white.opacity(0.78) : Color(red: 0.27, green: 0.31, blue: 0.33))
+                        .lineLimit(2)
+                    Text(metadataText)
+                        .font(.caption2)
+                        .foregroundStyle(colorScheme == .dark ? Color.white.opacity(0.66) : Color(red: 0.35, green: 0.39, blue: 0.41))
+                        .lineLimit(1)
+                }
+
+                Spacer()
+            }
+            .padding(14)
+            .background(
+                LinearGradient(
+                    colors: colorScheme == .dark
+                        ? [Color.green.opacity(0.22), Color.cyan.opacity(0.12)]
+                        : [Color.green.opacity(0.14), Color.cyan.opacity(0.08)],
+                    startPoint: .leading,
+                    endPoint: .trailing
+                ),
+                in: RoundedRectangle(cornerRadius: 20, style: .continuous)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .stroke(colorScheme == .dark ? Color.white.opacity(0.16) : Color.white.opacity(0.5), lineWidth: 1)
+            )
+        }
     }
 }
 

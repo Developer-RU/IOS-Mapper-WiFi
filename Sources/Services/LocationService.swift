@@ -9,7 +9,7 @@ final class LocationService: NSObject, ObservableObject {
     @Published private(set) var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published private(set) var currentLocation: CLLocation?
     @Published private(set) var route: [CLLocationCoordinate2D] = []
-    @Published private(set) var accuracyDescription = "Unknown"
+    @Published private(set) var accuracyDescription = AppStrings.localized("location.status.unknown")
 
     private let manager = CLLocationManager()
 
@@ -70,13 +70,13 @@ extension LocationService: CLLocationManagerDelegate {
             if route.count > 1500 {
                 route.removeFirst(route.count - 1500)
             }
-            accuracyDescription = String(format: "± %.0f m", latest.horizontalAccuracy)
+            accuracyDescription = AppStrings.localized("location.accuracy.format %d", Int(max(0, latest.horizontalAccuracy.rounded())))
         }
     }
 
     nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         Task { @MainActor in
-            accuracyDescription = error.localizedDescription
+            accuracyDescription = AppStrings.localized("location.status.unknown")
         }
     }
 }

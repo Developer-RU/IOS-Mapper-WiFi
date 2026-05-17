@@ -16,6 +16,8 @@ struct HistoryComparisonView: View {
                         subtitle: "history.header.subtitle"
                     )
 
+                    ExternalScannerStatusBanner()
+
                     GlassCard {
                         VStack(alignment: .leading, spacing: 14) {
                             GlowBadge(title: "history.hero.badge")
@@ -59,9 +61,9 @@ struct HistoryComparisonView: View {
                         }
                     }
 
-                    comparisonSection(title: String(localized: "history.section.new"), items: viewModel.comparison.newNetworks, tint: .green)
-                    comparisonSection(title: String(localized: "history.section.stable"), items: viewModel.comparison.stableNetworks, tint: .blue)
-                    comparisonSection(title: String(localized: "history.section.disappeared"), items: viewModel.comparison.disappearedNetworks, tint: .orange)
+                    comparisonSection(title: AppStrings.localized("history.section.new"), items: viewModel.comparison.newNetworks, tint: .green)
+                    comparisonSection(title: AppStrings.localized("history.section.stable"), items: viewModel.comparison.stableNetworks, tint: .blue)
+                    comparisonSection(title: AppStrings.localized("history.section.disappeared"), items: viewModel.comparison.disappearedNetworks, tint: .orange)
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 18)

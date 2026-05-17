@@ -68,15 +68,15 @@
 "dashboard.area.list.disappeared" = "Исчезнувшие";
 "dashboard.area.list.empty" = "Нет записей";
 "dashboard.platformNote.title" = "Примечание платформы";
-"dashboard.platformNote.body" = "Полноценный Wi‑Fi-сканер на обычном iPhone сделать нельзя. Приложение сохраняет только текущую подключённую сеть.";
+"dashboard.platformNote.body" = "На обычном iPhone доступны только данные подключённой сети. Для полного сканирования рядом используйте режим внешнего сканера.";
 "dashboard.permissions.title" = "Разрешения";
-"dashboard.permissions.body" = "Дайте разрешения на геолокацию и локальную сеть. Приложение сохраняет только текущую подключённую сеть, а не все ближайшие Wi‑Fi сети.";
+"dashboard.permissions.body" = "Дайте разрешения на геолокацию и локальную сеть. Режим внешнего сканера использует их для подключения к точке доступа сканера и синхронизации результатов.";
 "dashboard.permissions.location" = "Геолокация";
 "dashboard.permissions.localNetwork" = "Локальная сеть";
 "dashboard.permissions.openSettings" = "Открыть настройки";
 "scan.simulatorUnsupported" = "Используйте физический iPhone. Симулятор не может читать сети Wi-Fi.";
 "scan.waitingForLocation" = "Ожидание геопозиции перед сканированием.";
-"scan.connectToWifi" = "Подключитесь к сети Wi-Fi. Приложение сохраняет только текущую подключённую сеть.";
+"scan.connectToWifi" = "Подключитесь к Wi-Fi или включите режим внешнего сканера в настройках.";
 "dashboard.hero.badge" = "Оффлайн режим обследования";
 "dashboard.hero.title" = "Оффлайн-картирование Wi-Fi городского уровня";
 "dashboard.hero.subtitle" = "Отслеживайте перемещение, сохраняйте локальные наблюдения и держите базу обследования на устройстве.";
@@ -185,7 +185,7 @@
 
 "settings.header.eyebrow" = "Центр управления";
 "settings.header.title" = "Настройте сканер.";
-"settings.header.subtitle" = "Балансируйте точность, батарею и фоновую работу под ваш сценарий обследования.";
+"settings.header.subtitle" = "Настройте источник сканирования, точность, батарею и подключение к внешнему сканеру под ваш сценарий обследования.";
 "settings.quality.title" = "Пороги качества";
 "settings.quality.repeatedChecks %lld" = "Повторные проверки: %lld";
 "settings.quality.retryCount %lld" = "Число повторов: %lld";
@@ -198,9 +198,47 @@
 "settings.readiness.locationMode.value" = "Always + фоновая геолокация";
 "settings.readiness.localNetwork" = "Локальная сеть";
 "settings.readiness.localNetwork.value" = "Нужно разрешение для диагностики";
-"settings.readiness.note" = "Полноценный Wi‑Fi-сканер на обычном iPhone сделать нельзя. Приложение сохраняет только текущую подключённую сеть и GPS/историю локально.";
+"settings.readiness.note" = "Используйте режим iPhone для подключённой сети или режим внешнего сканера для полного сканирования ближайших сетей.";
 "settings.demoData.title" = "Демо-данные";
 "settings.demoData.generate" = "Сгенерировать демо-набор";
+
+"scanner.source.title" = "Источник сканирования";
+"scanner.source.picker" = "Источник";
+"scanner.source.iphone" = "Подключённая сеть iPhone";
+"scanner.source.external" = "Внешний сканер";
+
+"external.scanner.banner.title" = "Внешний сканер";
+"external.scanner.title" = "Подключение внешнего сканера";
+"external.scanner.ssid" = "SSID точки доступа сканера";
+"external.scanner.password" = "Пароль точки доступа сканера";
+"external.scanner.host" = "Хост сканера";
+"external.scanner.manualConnectHint" = "Подключитесь к точке доступа внешнего сканера вручную в системных настройках Wi-Fi iPhone.";
+"external.scanner.info.title" = "Информация о внешнем сканере";
+"external.scanner.info.serial" = "Серийный номер";
+"external.scanner.info.firmware" = "Версия прошивки";
+"external.scanner.info.networkTypes" = "Тип сканируемых сетей";
+"external.scanner.port %lld" = "Порт: %lld";
+"external.scanner.maxResults %lld" = "Макс. результатов: %lld";
+"external.scanner.timeout %lld" = "Таймаут скана: %lld сек";
+"external.scanner.connect" = "Подключить и проверить";
+"external.scanner.timeout" = "Таймаут внешнего сканера. Проверьте сигнал точки доступа и хост.";
+"external.scanner.error.unreachable" = "Нет доступа к внешнему сканеру.";
+"external.scanner.error.noResults" = "Сканер не вернул сети.";
+"external.scanner.error.invalidEndpoint" = "Некорректный endpoint сканера.";
+"external.scanner.error.invalidResponse" = "Некорректный формат ответа сканера.";
+"external.scanner.error.http %lld" = "HTTP ошибка сканера: %lld";
+"external.scanner.state.disconnected" = "Не подключен";
+"external.scanner.state.connecting" = "Подключение";
+"external.scanner.state.connected" = "Подключен";
+"external.scanner.state.scanning" = "Сканирование";
+"external.scanner.state.failed" = "Ошибка";
+"external.scanner.detail.disconnected" = "Не подключен | id: -";
+"external.scanner.detail.connecting" = "Идет подключение...";
+"external.scanner.detail.failed %@" = "Ошибка подключения: %@";
+"external.scanner.detail.dataExchange %@" = "%@ | обмен данными";
+"external.scanner.detail.ready %@" = "%@ | готов";
+"external.scanner.detail.monitoring %@" = "%@ | мониторинг";
+"external.scanner.detail.metadata %@ %@" = "id: %@ | fw: %@";
 
 // WiFi Band
 "wifi.band.24" = "2,4 ГГц";
@@ -260,6 +298,13 @@
 "location.status.restricted" = "Ограничено";
 "location.status.pending" = "Ожидание";
 "location.status.unknown" = "Неизвестно";
+"location.accuracy.format %d" = "± %d м";
+
+"general.waiting" = "Ожидание";
+"dashboard.kpi.currentSsid.noData" = "Нет данных";
+"dashboard.kpi.currentSsid.empty" = "Нет Wi-Fi сэмпла";
+"history.location.pending" = "Ожидание геопозиции";
+"history.location.enableNeeded" = "Включите геолокацию и перемещайтесь, чтобы сравнить текущую зону с сохранённой историей.";
 
 "permission.localNetwork.unknown" = "Неизвестно";
 "permission.localNetwork.granted" = "Разрешено";

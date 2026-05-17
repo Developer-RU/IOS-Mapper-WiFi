@@ -50,8 +50,26 @@ public enum ScannerMode: String, CaseIterable, Codable, Identifiable {
     }
 }
 
+public enum ScannerInputSource: String, CaseIterable, Codable, Identifiable {
+    case iphoneAssociated = "iPhone associated network"
+    case externalScanner = "External scanner"
+
+    public var id: String { rawValue }
+}
+
+public struct ExternalScannerSettings: Codable, Equatable {
+    public init() {}
+    public var ssid = "WIFI-MAPPER-SCANNER"
+    public var password = "12345678"
+    public var host = "192.168.4.1"
+    public var port = 80
+    public var scanTimeoutSeconds = 12.0
+    public var maxResults = 80
+}
+
 public struct ScannerSettings: Codable, Equatable {
     public init() {}
+    public var inputSource: ScannerInputSource = .iphoneAssociated
     public var mode: ScannerMode = .every5Seconds
     public var aggressiveScanning = false
     public var batterySaver = true
@@ -62,6 +80,7 @@ public struct ScannerSettings: Codable, Equatable {
     public var signalThreshold = -88
     public var ignoreWeakNetworks = true
     public var demoModeEnabled = false
+    public var externalScanner = ExternalScannerSettings()
 }
 
 public struct WiFiObservation: Identifiable, Codable, Equatable {

@@ -8,7 +8,7 @@ final class HistoryComparisonViewModel: ObservableObject {
     @Published var radiusMeters: Double = 150
     @Published var comparisonWindow: ComparisonWindow = .last24Hours
     @Published private(set) var comparison = AreaHistoryComparison()
-    @Published private(set) var currentCoordinateDescription = "Location pending"
+    @Published private(set) var currentCoordinateDescription = AppStrings.localized("history.location.pending")
     @Published var errorMessage: String?
 
     private let appModel: AppModel
@@ -23,7 +23,7 @@ final class HistoryComparisonViewModel: ObservableObject {
                 guard let self else { return }
                 currentCoordinateDescription = location.map {
                     "\($0.coordinate.latitude.formatted(.number.precision(.fractionLength(4)))), \($0.coordinate.longitude.formatted(.number.precision(.fractionLength(4))))"
-                } ?? "Location pending"
+                } ?? AppStrings.localized("history.location.pending")
             }
             .store(in: &cancellables)
     }
@@ -35,7 +35,7 @@ final class HistoryComparisonViewModel: ObservableObject {
 
     func refresh() async {
         guard let coordinate = appModel.locationService.currentLocation?.coordinate else {
-            errorMessage = "Move with location enabled to compare the current area against stored history."
+            errorMessage = AppStrings.localized("history.location.enableNeeded")
             return
         }
 

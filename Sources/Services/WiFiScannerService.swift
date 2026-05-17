@@ -14,22 +14,35 @@ final class WiFiScannerService: ObservableObject {
 
     private let repository: NetworkRepository
     private let locationService: LocationService
+    private let externalScannerService: ExternalScannerService
     private let settingsKey = "scanner.settings"
     private var scanTask: Task<Void, Never>?
+    private var externalStatusTask: Task<Void, Never>?
     private var demoDataSeeded = false
     private var isRefreshingHistory = false
 
-    init(repository: NetworkRepository, locationService: LocationService) {
+    init(repository: NetworkRepository, locationService: LocationService, externalScannerService: ExternalScannerService) {
         self.repository = repository
         self.locationService = locationService
+        self.externalScannerService = externalScannerService
         self.settings = Self.loadSettings()
+        configureExternalStatusTracking(for: self.settings.inputSource)
     }
 
     func updateSettings(_ update: (inout ScannerSettings) -> Void) {
+        let previousInputSource = settings.inputSource
         var draft = settings
         update(&draft)
         settings = draft
         saveSettings()
+
+        if previousInputSource != draft.inputSource {
+            configureExternalStatusTracking(for: draft.inputSource)
+        }
+    }
+
+    deinit {
+        externalStatusTask?.cancel()
     }
 
     func startScanning() {
@@ -43,6 +56,18 @@ final class WiFiScannerService: ObservableObject {
 
         scanTask = Task {
             do {
+                if settings.inputSource == .externalScanner {
+                    let connected = await externalScannerService.connectAndProbe(using: settings.externalScanner)
+                    guard connected else {
+                        throw NSError(
+                            domain: "ExternalScannerService",
+                            code: 1,
+                            userInfo: [NSLocalizedDescriptionKey: externalScannerService.status.lastErrorMessage ?? AppStrings.localized("external.scanner.error.unreachable")]
+                        )
+                    }
+                    try await externalScannerService.configureRemoteScanner(using: settings)
+                }
+
                 let sessionID = try await repository.startSession()
                 await MainActor.run {
                     sessionState.sessionID = sessionID
@@ -63,6 +88,12 @@ final class WiFiScannerService: ObservableObject {
         scanTask = nil
         locationService.stop()
         UIApplication.shared.isIdleTimerDisabled = false
+
+        if settings.inputSource == .externalScanner {
+            Task {
+                await externalScannerService.stopScan(using: settings.externalScanner)
+            }
+        }
 
         if let sessionID = sessionState.sessionID {
             Task {
@@ -118,6 +149,11 @@ final class WiFiScannerService: ObservableObject {
         await refreshHistory()
     }
 
+    func testExternalScannerConnection() async {
+        guard settings.inputSource == .externalScanner else { return }
+        _ = await externalScannerService.connectAndProbe(using: settings.externalScanner)
+    }
+
     private func scanLoop(sessionID: UUID) async {
         while !Task.isCancelled {
             _ = try? await captureCurrentNetwork(sessionID: sessionID)
@@ -137,18 +173,22 @@ final class WiFiScannerService: ObservableObject {
             return liveNetworks.first
         }
 
+        if settings.inputSource == .externalScanner {
+            return try await captureExternalNetworks(sessionID: sessionID)
+        }
+
 #if targetEnvironment(simulator)
-        sessionState.lastErrorMessage = String(localized: "scan.simulatorUnsupported")
+        sessionState.lastErrorMessage = AppStrings.localized("scan.simulatorUnsupported")
         return nil
 #endif
 
         guard let location = locationService.currentLocation?.coordinate else {
-            sessionState.lastErrorMessage = String(localized: "scan.waitingForLocation")
+            sessionState.lastErrorMessage = AppStrings.localized("scan.waitingForLocation")
             return nil
         }
 
         guard let hotspot = await fetchCurrentNetwork(timeout: 2.5) else {
-            sessionState.lastErrorMessage = String(localized: "scan.connectToWifi")
+            sessionState.lastErrorMessage = AppStrings.localized("scan.connectToWifi")
             return nil
         }
 
@@ -180,7 +220,86 @@ final class WiFiScannerService: ObservableObject {
 
         snapshot = try await repository.upsert(snapshot: snapshot, sessionID: sessionID)
         lastScanDate = snapshot.lastSeen
+        sessionState.lastErrorMessage = nil
         return snapshot
+    }
+
+    private func captureExternalNetworks(sessionID: UUID?) async throws -> WiFiNetworkSnapshot? {
+        do {
+            try await externalScannerService.startScan(using: settings.externalScanner)
+            let result = try await externalScannerService.pollResults(using: settings.externalScanner)
+
+            let fallbackCoordinate = locationService.currentLocation?.coordinate
+            var inserted: [WiFiNetworkSnapshot] = []
+
+            for network in result.networks {
+                let latitude = network.latitude ?? fallbackCoordinate?.latitude
+                let longitude = network.longitude ?? fallbackCoordinate?.longitude
+                guard let latitude, let longitude else { continue }
+
+                guard !settings.ignoreWeakNetworks || network.rssi >= settings.signalThreshold else { continue }
+
+                var snapshot = WiFiNetworkSnapshot(
+                    id: UUID(),
+                    ssid: network.ssid,
+                    bssid: network.bssid,
+                    latitude: latitude,
+                    longitude: longitude,
+                    timestamp: Date(),
+                    rssi: max(-100, min(-20, network.rssi)),
+                    frequencyMHz: network.frequencyMHz,
+                    channel: network.channel,
+                    band: band(for: network.frequencyMHz),
+                    security: securityType(from: network.security),
+                    encryption: network.encryption,
+                    encoding: nil,
+                    captivePortalHint: nil,
+                    authenticationHint: "External scanner \(result.deviceID)",
+                    scanCount: 1,
+                    lastSeen: Date(),
+                    history: []
+                )
+
+                snapshot = try await repository.upsert(snapshot: snapshot, sessionID: sessionID)
+                inserted.append(snapshot)
+            }
+
+            lastScanDate = Date()
+            if inserted.isEmpty {
+                sessionState.lastErrorMessage = AppStrings.localized("external.scanner.error.noResults")
+            } else {
+                sessionState.lastErrorMessage = nil
+            }
+            return inserted.first
+        } catch {
+            sessionState.lastErrorMessage = error.localizedDescription
+            return nil
+        }
+    }
+
+    private func band(for frequencyMHz: Int?) -> WiFiBand {
+        guard let frequencyMHz else { return .unknown }
+        switch frequencyMHz {
+        case 2_400 ... 2_500:
+            return .band24
+        case 4_900 ... 5_900:
+            return .band5
+        case 5_925 ... 7_125:
+            return .band6
+        default:
+            return .unknown
+        }
+    }
+
+    private func securityType(from value: String?) -> WiFiSecurity {
+        guard let value else { return .unknown }
+        let normalized = value.lowercased()
+        if normalized.contains("wpa3") { return .wpa3 }
+        if normalized.contains("wpa2") { return .wpa2 }
+        if normalized.contains("wpa") { return .wpa }
+        if normalized.contains("open") { return .open }
+        if normalized.contains("secure") { return .secure }
+        return .unknown
     }
 
     private func fetchCurrentNetwork(timeout: TimeInterval) async -> NEHotspotNetwork? {
@@ -209,11 +328,42 @@ final class WiFiScannerService: ObservableObject {
         UserDefaults.standard.set(data, forKey: settingsKey)
     }
 
+    private func configureExternalStatusTracking(for inputSource: ScannerInputSource) {
+        externalStatusTask?.cancel()
+        externalStatusTask = nil
+
+        guard inputSource == .externalScanner else {
+            externalScannerService.resetStatus()
+            return
+        }
+
+        externalStatusTask = Task { [weak self] in
+            guard let self else { return }
+            while !Task.isCancelled {
+                if !self.sessionState.isScanning {
+                    _ = await self.externalScannerService.connectAndProbe(using: self.settings.externalScanner)
+                }
+                try? await Task.sleep(nanoseconds: 3_000_000_000)
+            }
+        }
+    }
+
     private static func loadSettings() -> ScannerSettings {
         guard let data = UserDefaults.standard.data(forKey: "scanner.settings"),
-              let settings = try? JSONDecoder().decode(ScannerSettings.self, from: data) else {
+              var settings = try? JSONDecoder().decode(ScannerSettings.self, from: data) else {
             return ScannerSettings()
         }
+
+        // Migrate legacy default AP password to match ESP32 firmware default.
+        if settings.externalScanner.ssid == "WIFI-MAPPER-SCANNER",
+           settings.externalScanner.host == "192.168.4.1",
+           settings.externalScanner.password == "wifimapper123" {
+            settings.externalScanner.password = "12345678"
+            if let migratedData = try? JSONEncoder().encode(settings) {
+                UserDefaults.standard.set(migratedData, forKey: "scanner.settings")
+            }
+        }
+
         return settings
     }
 }

@@ -16,6 +16,8 @@ struct DatabaseBrowserView: View {
                         subtitle: "database.header.subtitle"
                     )
 
+                    ExternalScannerStatusBanner()
+
                     if let exportError = viewModel.exportError {
                         GlassCard {
                             Label(exportError, systemImage: "exclamationmark.triangle.fill")

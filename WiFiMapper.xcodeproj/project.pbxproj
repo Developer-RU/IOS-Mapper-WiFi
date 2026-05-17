@@ -24,8 +24,11 @@
 		39992766253C1B05F05952D3 /* DemoDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */; };
 		3BC11F94610DAAF865549331 /* BackgroundTaskService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */; };
 		3F38082EF91A7C1BE2F7A578 /* DemoDataFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647CB52DCF8C46878A2DE5E /* DemoDataFactoryTests.swift */; };
+		4334CB0E5CE5FFF03E213B5B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7CB267B7FD970DB0B2D66C24 /* Localizable.strings */; };
 		46B1C2905C0232E7BDCDC5C1 /* WiFiMapperCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E1E75A8E97DBDD3D2546616 /* HeatmapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF6541D7B76330F3C360E8 /* HeatmapOverlay.swift */; };
+		4EC587A1476140D4E0C747B7 /* ExternalScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB9694D27B9E3E5723317BB /* ExternalScannerService.swift */; };
+		574B398952FE211524AA8463 /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8FEC3D5D29AC36CAF66CD0 /* AppLocalization.swift */; };
 		5A5DBA35966D9236BA49F247 /* WiFiMapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0C6FABE06A37B16ED3CB2F /* WiFiMapperApp.swift */; };
 		6BD0639AEEEBF4F0881A4E5F /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020668254C457B3A6172D3E /* MapScreen.swift */; };
 		844874CFE2884D2259A0F10F /* HistoryComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAD61BF23FA3E37B9B57910 /* HistoryComparisonViewModel.swift */; };
@@ -35,7 +38,6 @@
 		8A714EFCD2F8C6ECDC743F3C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AAE947DF2B358A819737BA /* SettingsView.swift */; };
 		8B3AE7B02A5F508011080157 /* WiFiMapperCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8F7DCDFEA12AB420349BBE76 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA03B0497F5F9C2A604B23 /* DashboardViewModel.swift */; };
-		AABBCCEE00EE00EE00EE00EE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AABBCCDD00DD00DD00DD00DD /* Localizable.strings */; };
 		AAF7D08A3717516F34BFC92B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD9D17F163FD5D2A27009F5 /* SplashView.swift */; };
 		AECE7A985BDA57BE138FDF8E /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A901B1B8FDF91BD3B31743 /* MapViewRepresentable.swift */; };
 		B6353540F640650A7BBE61C2 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682A9B97BF9BFB0FDCFCE70D /* AnalyticsViewModel.swift */; };
@@ -90,35 +92,37 @@
 
 /* Begin PBXFileReference section */
 		00B295EB2B184B34F38E6AA5 /* WiFiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiModels.swift; sourceTree = "<group>"; };
+		0795619353ED4A5FE34B61CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0DB9694D27B9E3E5723317BB /* ExternalScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalScannerService.swift; sourceTree = "<group>"; };
 		18CA03B0497F5F9C2A604B23 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		2299EDFFA5C3EB1D35EB3105 /* HistoryComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryComparisonView.swift; sourceTree = "<group>"; };
-		232F8CDAEFBD771C9790B1A7 /* WiFiMapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		232F8CDAEFBD771C9790B1A7 /* WiFiMapper.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = WiFiMapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27718026DB1021C777571D2B /* WiFiScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiScannerService.swift; sourceTree = "<group>"; };
 		27872C9E465E42AB4B731064 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTaskService.swift; sourceTree = "<group>"; };
+		3B3D50901A64F8E2577F0682 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B8FEC3D5D29AC36CAF66CD0 /* AppLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
 		3E87F0D79B1791B3B2721C51 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		48A901B1B8FDF91BD3B31743 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
+		563119F8DFE9E7014C5850B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58A1715E0B164315916109E4 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		6020668254C457B3A6172D3E /* MapScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		682A9B97BF9BFB0FDCFCE70D /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		6CE4C3EAD975ACD8433AF089 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		729AE9305916289E667F7DBB /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7CD9D17F163FD5D2A27009F5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		7D0A64013E1EA1032A9F3651 /* DatabaseBrowserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseBrowserViewModel.swift; sourceTree = "<group>"; };
 		846B02B18205C135D80B3629 /* NetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepository.swift; sourceTree = "<group>"; };
+		8D32EEBF2AC3D46775756665 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E149DD02E8A3C7EF7024F98 /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		9049DA7EF2EAD2937EE42F37 /* NetworkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDetailsView.swift; sourceTree = "<group>"; };
 		90775675DD045CD3AFD9ACDA /* DatabaseBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseBrowserView.swift; sourceTree = "<group>"; };
 		93887EE64C117247D48768E1 /* NetworkRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepositoryTests.swift; sourceTree = "<group>"; };
 		9C9F6C36F05B5E3504ED0B20 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		9D0C6FABE06A37B16ED3CB2F /* WiFiMapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMapperApp.swift; sourceTree = "<group>"; };
-		AABBCC110011001100110011 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC220022002200220022 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC330033003300330033 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC440044004400440044 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = Resources/fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC550055005500550055 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Resources/it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC660066006600660066 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = Resources/ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AABBCC770077007700770077 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = Resources/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD2B5239A32310BB07E4DFF2 /* WiFiMapperCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiFiMapperCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDF6541D7B76330F3C360E8 /* HeatmapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapOverlay.swift; sourceTree = "<group>"; };
+		C3362145CB096D1064F7E941 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C89104144D6E8BDC91EF5C58 /* WiFiMapperTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = WiFiMapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoDataFactory.swift; sourceTree = "<group>"; };
 		D0AAE947DF2B358A819737BA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -165,9 +169,9 @@
 		633C7710C17706A700E6B5D8 = {
 			isa = PBXGroup;
 			children = (
-				AABBCCDD00DD00DD00DD00DD /* Localizable.strings */,
 				8A753C4F65B17DB025047788 /* Models */,
 				861A47492219105CF88B49B1 /* Persistence */,
+				F33CDDC579E6E6F10E659DC0 /* Resources */,
 				D5F443F8A9D0DCFBC11DDFD6 /* Sources */,
 				3676088F146D9A017668E3B9 /* Tests */,
 				8134B52F364AE35B88D880B9 /* Products */,
@@ -187,6 +191,7 @@
 		7CB8B8AA91B6942FD75286C4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3B8FEC3D5D29AC36CAF66CD0 /* AppLocalization.swift */,
 				27872C9E465E42AB4B731064 /* AppModel.swift */,
 			);
 			path = App;
@@ -264,12 +269,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F33CDDC579E6E6F10E659DC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7CB267B7FD970DB0B2D66C24 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F6B4D428C88F174AF750015A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				2E609AC07D7E89D30F571423 /* BackgroundTaskService.swift */,
 				C9396476172AA1B3B57C0D93 /* DemoDataFactory.swift */,
 				D568C9E796353C33AD199158 /* ExportService.swift */,
+				0DB9694D27B9E3E5723317BB /* ExternalScannerService.swift */,
 				DFC6325F6941D14F9146660C /* LocationService.swift */,
 				FC95439DAFDAFCFE4ED71925 /* PermissionService.swift */,
 				27718026DB1021C777571D2B /* WiFiScannerService.swift */,
@@ -321,8 +335,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1780ED4DD15B02AA001D6C20 /* Build configuration list for PBXNativeTarget "WiFiMapper" */;
 			buildPhases = (
-				AABBCCFF00FF00FF00FF00FF /* Resources */,
 				25B96E69829FF3521EEB0BC5 /* Sources */,
+				F82B3DF083C69F4F34E5EF8C /* Resources */,
 				3A45F87418364D8077364630 /* Frameworks */,
 				80B2B64D8926653FAD875E2C /* Embed Frameworks */,
 			);
@@ -346,14 +360,22 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1F7841DF1E0781E35B646AB2 = {
+						DevelopmentTeam = VK5PTZ6599;
+					};
+					B6EEF65E637931B4AC8D7F0B = {
+						DevelopmentTeam = VK5PTZ6599;
+					};
+				};
 			};
 			buildConfigurationList = 6A68B8973135437578E9CF63 /* Build configuration list for PBXProject "WiFiMapper" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
-				en,
 				de,
+				en,
 				es,
 				fr,
 				it,
@@ -375,11 +397,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AABBCCFF00FF00FF00FF00FF /* Resources */ = {
+		F82B3DF083C69F4F34E5EF8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABBCCEE00EE00EE00EE00EE /* Localizable.strings in Resources */,
+				4334CB0E5CE5FFF03E213B5B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +414,7 @@
 			files = (
 				88BFBF0B990B4D3A88F244A6 /* AnalyticsView.swift in Sources */,
 				B6353540F640650A7BBE61C2 /* AnalyticsViewModel.swift in Sources */,
+				574B398952FE211524AA8463 /* AppLocalization.swift in Sources */,
 				11138140FBC7838C64D5B9AF /* AppModel.swift in Sources */,
 				3BC11F94610DAAF865549331 /* BackgroundTaskService.swift in Sources */,
 				258B6F77026CE7B63935A75B /* ContentView.swift in Sources */,
@@ -400,6 +423,7 @@
 				132EB90D5E376CE17E72CB4E /* DatabaseBrowserView.swift in Sources */,
 				0EF4E1370495FF9F5B896EBE /* DatabaseBrowserViewModel.swift in Sources */,
 				24A718E8A3D7270C4E5B1922 /* ExportService.swift in Sources */,
+				4EC587A1476140D4E0C747B7 /* ExternalScannerService.swift in Sources */,
 				4E1E75A8E97DBDD3D2546616 /* HeatmapOverlay.swift in Sources */,
 				0BDC52B540C94778087B5A25 /* HistoryComparisonView.swift in Sources */,
 				844874CFE2884D2259A0F10F /* HistoryComparisonViewModel.swift in Sources */,
@@ -455,16 +479,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AABBCCDD00DD00DD00DD00DD /* Localizable.strings */ = {
+		7CB267B7FD970DB0B2D66C24 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AABBCC110011001100110011 /* de */,
-				AABBCC220022002200220022 /* en */,
-				AABBCC330033003300330033 /* es */,
-				AABBCC440044004400440044 /* fr */,
-				AABBCC550055005500550055 /* it */,
-				AABBCC660066006600660066 /* ja */,
-				AABBCC770077007700770077 /* ru */,
+				C3362145CB096D1064F7E941 /* de */,
+				0795619353ED4A5FE34B61CA /* en */,
+				3B3D50901A64F8E2577F0682 /* es */,
+				6CE4C3EAD975ACD8433AF089 /* fr */,
+				729AE9305916289E667F7DBB /* it */,
+				8D32EEBF2AC3D46775756665 /* ja */,
+				563119F8DFE9E7014C5850B3 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -476,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VK5PTZ6599;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -543,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VK5PTZ6599;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

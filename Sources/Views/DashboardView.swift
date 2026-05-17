@@ -16,10 +16,12 @@ struct DashboardView: View {
                         subtitle: "dashboard.header.subtitle"
                     )
 
+                    ExternalScannerStatusBanner()
+
                     heroCard
 
                     if viewModel.isDemoMode {
-                        DemoModeBanner(subtitle: String(localized: "dashboard.demo.subtitle"))
+                        DemoModeBanner(subtitle: AppStrings.localized("dashboard.demo.subtitle"))
                     }
 
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 16) {
@@ -77,8 +79,8 @@ struct DashboardView: View {
                             Text("dashboard.area.strongest \(viewModel.areaComparison.strongestLabel)")
                                 .font(.subheadline.weight(.medium))
 
-                            comparisonList(title: String(localized: "dashboard.area.list.new"), items: viewModel.areaComparison.newNetworks)
-                            comparisonList(title: String(localized: "dashboard.area.list.disappeared"), items: viewModel.areaComparison.disappearedNetworks)
+                            comparisonList(title: AppStrings.localized("dashboard.area.list.new"), items: viewModel.areaComparison.newNetworks)
+                            comparisonList(title: AppStrings.localized("dashboard.area.list.disappeared"), items: viewModel.areaComparison.disappearedNetworks)
                         }
                     }
 
@@ -127,7 +129,7 @@ struct DashboardView: View {
                 }
 
                 HStack(spacing: 12) {
-                    Button(viewModel.sessionState.isScanning ? String(localized: "dashboard.hero.stopScan") : String(localized: "dashboard.hero.startScan")) {
+                    Button(viewModel.sessionState.isScanning ? AppStrings.localized("dashboard.hero.stopScan") : AppStrings.localized("dashboard.hero.startScan")) {
                         withAnimation(.smooth(duration: 0.25)) {
                             viewModel.toggleScanning()
                         }

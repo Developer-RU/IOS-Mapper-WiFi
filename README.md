@@ -1,70 +1,95 @@
-# WiFi Mapper
+# IOS-Mapper WiFi
 
-WiFi Mapper is an offline iPhone app for local Wi-Fi observation logging, route-aware mapping, heatmap visualization, historical browsing, and export. The project uses SwiftUI, MVVM, Core Data, MapKit, CoreLocation, Combine, BackgroundTasks, and Charts.
+IOS-Mapper WiFi is an iPhone application for Wi-Fi survey workflows with offline storage, map visualization, analytics, and optional integration with an ESP32 external scanner.
 
-## Current capability model
+This project is designed to be free to use for research, education, testing, and production-like field diagnostics.
 
-This project uses only public Apple APIs.
+## Related Project
 
-That means:
-- The app can persist GPS-tagged observations of the currently associated Wi-Fi network.
-- The app can maintain local history, map overlays, analytics, exports, and background refresh around location updates.
-- The app cannot passively enumerate all nearby Wi-Fi networks on stock iOS without private entitlements or specialized enterprise infrastructure.
+This mobile app depends on the companion firmware project:
+- [ESP32-Mapper WiFi](../WIFI-MAPPER)
 
-The UI and architecture are prepared for a richer scanner provider, but the default implementation remains production-safe and App Store-compatible.
+If your repositories are published separately on GitHub, replace this relative link with the public firmware repository URL.
 
-## Included product features
+## What This App Does
 
-- Live dashboard with session stats and area comparison summary
-- Full-screen map with point, route, heatmap, and congestion layers
-- Historical comparison tab with adjustable radius and time window
-- Local database browser with search, sort, delete, and export
-- Demo mode with generated offline sample observations for UI testing
-- Analytics for bands, security mix, channels, and observation trend
+- Collects Wi-Fi observations and geolocation context.
+- Stores data locally in Core Data (offline-first workflow).
+- Displays current and historical data on map overlays.
+- Compares historical area snapshots.
+- Shows signal/security/channel analytics.
+- Imports scan data from an external ESP32 scanner via HTTP API.
 
-## Project setup
+## Scan Sources
 
-1. Install Xcode 26+ and XcodeGen.
-2. Run `xcodegen generate` in the project root.
-3. Open `WiFiMapper.xcodeproj`.
-4. Set your Apple Development Team in Signing & Capabilities.
-5. Build for a physical iPhone to validate location and associated-network behavior.
+The app supports two scan modes:
 
-## Required permissions
+1. `iPhone associated network`
+- Uses public iOS APIs.
+- Can read only the currently associated network.
 
-The app requests:
-- When In Use location
-- Always location
-- Local network access
-- Background location runtime behavior via Info.plist background modes
+2. `External scanner`
+- Uses ESP32 scanner HTTP endpoints.
+- Supports full nearby network scan ingestion.
 
-## Physical iPhone checklist
+## External Scanner Integration
 
-1. Use a real iPhone, not only Simulator.
-2. In Signing & Capabilities, set a valid Team and unique bundle identifier if needed.
-3. In iOS Settings, allow Always location access.
-4. Enable Precise Location for best route/heatmap quality.
-5. Join a Wi-Fi network before starting a scan session.
-6. Lock the screen and background the app to test location/background refresh behavior.
-7. Export CSV, JSON, and SQLite backup from the Database tab to verify local persistence.
+When `External scanner` is selected, IOS-Mapper WiFi:
 
-## Architecture overview
+1. Checks scanner availability (`GET /status`).
+2. Pushes scan configuration (`POST /configure`).
+3. Starts and stops scan sessions (`POST /scan/start`, `POST /scan/stop`).
+4. Polls result payloads (`GET /scan/results`).
+5. Saves observations to local history and analytics datasets.
 
-- `Sources/App`: app composition and service wiring
-- `Sources/Models`: domain models, filter definitions, comparison/analytics types
-- `Sources/Persistence`: Core Data stack and repository queries
-- `Sources/Services`: location, scanning, permissions, export, background refresh
-- `Sources/ViewModels`: MVVM presentation logic
-- `Sources/Views`: SwiftUI screens and map overlay components
+Important: Wi-Fi AP connection is manual in iOS system settings. The app does not auto-join scanner access points.
 
-## Notes on background behavior
+## Project Structure
 
-Background location updates are enabled where iOS allows them. BackgroundTasks are scheduled for refresh-oriented work, but iOS still controls actual execution timing. Continuous full-spectrum Wi-Fi scanning in the background is not possible through public APIs.
+- `Sources/App` - app composition, localization helpers, app model.
+- `Sources/Models` - domain and settings models.
+- `Sources/Persistence` - Core Data stack and repository layer.
+- `Sources/Services` - scanner, location, export, background services.
+- `Sources/ViewModels` - presentation logic.
+- `Sources/Views` - SwiftUI screens and components.
+- `Resources` - Info.plist, entitlements, localized strings.
+- `Tests` - unit tests for data and repository behavior.
 
-## Local-only storage
+Additional docs:
+- [Architecture](docs/ARCHITECTURE.md)
+- [External Scanner Guide](docs/EXTERNAL_SCANNER.md)
 
-All data stays on-device.
-- No cloud sync
-- No external server dependency
-- No remote database
-- Export is user-initiated and file-based only
+## Build and Run
+
+### Requirements
+
+- Xcode 26+
+- XcodeGen
+- iOS device (recommended for real field testing)
+
+### Steps
+
+1. Generate the project:
+   - `xcodegen generate`
+2. Open:
+   - `WiFiMapper.xcodeproj`
+3. Configure signing team in Xcode.
+4. Build and run on device.
+
+## Permissions and Capabilities
+
+- Location (`When In Use` + `Always`)
+- Local Network access
+- Access WiFi Information entitlement
+- Background location and processing modes
+- ATS local-network allowance for scanner HTTP endpoints
+
+## Data Handling and Privacy
+
+- Data is stored locally by default.
+- No mandatory cloud dependency.
+- Export is explicit and user-triggered.
+
+## Free Use Notice
+
+This project is intended to be freely usable. If you distribute or publish it, include a license file and attribution policy appropriate for your organization.

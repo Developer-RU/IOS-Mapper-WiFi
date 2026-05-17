@@ -33,11 +33,11 @@ struct NetworkDetailsView: View {
                         VStack(alignment: .leading, spacing: 10) {
                             detailRow("networkDetails.security", network.security.localizedTitle)
                             detailRow("networkDetails.band", network.band.localizedTitle)
-                            detailRow("networkDetails.frequency", network.frequencyMHz.map { "\($0) MHz" } ?? String(localized: "networkDetails.unavailable"))
-                            detailRow("networkDetails.channel", network.channel.map(String.init) ?? String(localized: "networkDetails.unavailable"))
-                            detailRow("networkDetails.encryption", network.encryption ?? String(localized: "networkDetails.unavailable"))
-                            detailRow("networkDetails.captivePortal", network.captivePortalHint ?? String(localized: "networkDetails.notDetected"))
-                            detailRow("networkDetails.authHint", network.authenticationHint ?? String(localized: "networkDetails.unavailable"))
+                                detailRow("networkDetails.frequency", network.frequencyMHz.map { "\($0) MHz" } ?? AppStrings.localized("networkDetails.unavailable"))
+                                detailRow("networkDetails.channel", network.channel.map(String.init) ?? AppStrings.localized("networkDetails.unavailable"))
+                                detailRow("networkDetails.encryption", network.encryption ?? AppStrings.localized("networkDetails.unavailable"))
+                                detailRow("networkDetails.captivePortal", network.captivePortalHint ?? AppStrings.localized("networkDetails.notDetected"))
+                                detailRow("networkDetails.authHint", network.authenticationHint ?? AppStrings.localized("networkDetails.unavailable"))
                             detailRow("networkDetails.coordinates", "\(network.latitude.formatted(.number.precision(.fractionLength(5)))), \(network.longitude.formatted(.number.precision(.fractionLength(5))))")
                             detailRow("networkDetails.scanCount", String(network.scanCount))
                         }
